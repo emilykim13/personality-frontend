@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react"
 import MyProfile from './components/MyProfile.js'
+import Personalities from './components/Personalities.js'
 import Home from './components/Home.js'
 import Login from './components/Login.js'
 import { 
@@ -22,21 +23,37 @@ class App extends React.Component {
 
   componentDidMount() {
     console.log("component mounted")
-  }
-
-  getPersonalities = () => {
-    fetch("http://localhost:3000/api/v1/profiles", {
+    fetch("http://localhost:3000/api/v1/personalities", {
       method: "GET",
       headers: {
         "Content-Type" : "application/json",
-        "Accept" : "application/json",
-        "Authorization" : `Bearer ${localStorage.token}`
+        "Accept" : "application/json"
+        // "Authorization" : `Bearer ${localStorage.token}`
       }
     })
     .then(res => res.json())
-    .then(personData => {
-      this.setState({ profiles: personData })
-    })
+    .then(personalityData => 
+      // console.log(personalityData)
+      {
+      this.setState({ personalities: personalityData })
+    }
+    )
+  }
+
+  getProfiles = () => {
+
+    // fetch("http://localhost:3000/api/v1/profiles", {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type" : "application/json",
+    //     "Accept" : "application/json",
+    //     "Authorization" : `Bearer ${localStorage.token}`
+    //   }
+    // })
+    // .then(res => res.json())
+    // .then(personData => {
+    //   this.setState({ profiles: personData })
+    // })
   }
   
   handleLogin = (e) => {
@@ -57,12 +74,13 @@ class App extends React.Component {
 
     fetch('http://localhost:3000/api/v1/login', reqPackage)
     .then(res => res.json())
-    .then(data =>
+    .then(data => 
       {
       localStorage.setItem("token", data.token)
-      this.getPersonalities()
+      // this.getProfiles()
       this.setState({
-        loggedIn: true
+        loggedIn: true,
+        profiles: data.profiles
       })
       }
     )
@@ -79,16 +97,8 @@ class App extends React.Component {
   handleProfile = () => {
     this.setState({
       profile: true
-      // home: false
     })
   }
-
-  // handleHome = () => {
-  //   this.setState({
-  //     profile: false, 
-  //     home: true
-  //   })
-  // }
 
   render() {
     return (
@@ -124,6 +134,16 @@ class App extends React.Component {
             profile={this.state.profile}
             />)
             }>
+          </Route>
+
+          <Route exact path="/personalities" render={(routerprops) =>
+          (<Personalities 
+            personalities={this.state.personalities}
+            handleLogout={this.handleLogout} 
+            {...routerprops}
+            loggedIn={this.state.loggedIn}
+            />)
+          }>
           </Route>
 
         </Switch>
