@@ -11,7 +11,7 @@ const Login = (props) => {
             <input type="password"/>
             <br/>
             <input type="submit" value="Login"/>
-            {props.loggedIn ? <Redirect to="/myPersonality"/> : null}
+            {props.loggedIn ? <Redirect to="/home"/> : null}
         </form>
     )
 }

@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react"
-import MyPersonality from './components/MyPersonality.js'
+import MyProfile from './components/MyProfile.js'
+import Home from './components/Home.js'
 import Login from './components/Login.js'
 import { 
   BrowserRouter as Router, 
@@ -12,8 +13,11 @@ import {
 
 class App extends React.Component {
   state={
+    profiles: [],
     personalities: [],
-    loggedIn: false
+    loggedIn: false,
+    profile: false
+    // home: false
   }
 
   componentDidMount() {
@@ -21,7 +25,7 @@ class App extends React.Component {
   }
 
   getPersonalities = () => {
-    fetch("http://localhost:3000/api/v1/personalities", {
+    fetch("http://localhost:3000/api/v1/profiles", {
       method: "GET",
       headers: {
         "Content-Type" : "application/json",
@@ -31,7 +35,7 @@ class App extends React.Component {
     })
     .then(res => res.json())
     .then(personData => {
-      this.setState({ personalities: personData })
+      this.setState({ profiles: personData })
     })
   }
   
@@ -72,6 +76,20 @@ class App extends React.Component {
     })
   }
 
+  handleProfile = () => {
+    this.setState({
+      profile: true
+      // home: false
+    })
+  }
+
+  // handleHome = () => {
+  //   this.setState({
+  //     profile: false, 
+  //     home: true
+  //   })
+  // }
+
   render() {
     return (
       <div>
@@ -84,13 +102,26 @@ class App extends React.Component {
             <Login handleLogin={this.handleLogin} loggedIn={this.state.loggedIn}/>
           </Route>
 
-          <Route eaxct path="/myPersonality" render={(routerprops) =>
+          <Route eaxct path="/MyProfile" render={(routerprops) =>
             (
-            <MyPersonality 
-            personalities={this.state.personalities} 
+            <MyProfile 
+            profiles={this.state.profiles} 
             handleLogout={this.handleLogout} 
             {...routerprops}
             loggedIn={this.state.loggedIn}
+            handleHome={this.handleHome}
+            />)
+            }>
+          </Route>
+
+          <Route eaxct path="/home" render={(routerprops) =>
+            (
+            <Home 
+            profiles={this.state.profiles} 
+            handleLogout={this.handleLogout} 
+            {...routerprops}
+            loggedIn={this.state.loggedIn}
+            profile={this.state.profile}
             />)
             }>
           </Route>
