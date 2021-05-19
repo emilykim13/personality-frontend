@@ -8,6 +8,9 @@ class Home extends React.Component {
         <div>
           <h1>Ni haody, this is my components/Home.js</h1>
           {/* <p>{console.log(this.props.personalities)}</p> */}
+          {/* <button onClick={this.props.handleProfile}>Profile</button>
+          {!this.props.profile ? <Redirect to="/personalities"/> : null} */}
+
           <button onClick={this.props.handleProfile}>Profile</button>
           {!this.props.profile ? <Redirect to="/MyProfile"/> : null}
           {/* stopped here */}
