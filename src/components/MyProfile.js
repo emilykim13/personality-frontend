@@ -1,5 +1,5 @@
 import React from "react"
-import { Redirect } from "react-router-dom"
+// import { Redirect } from "react-router-dom"
 const MyProfile = () => {
 
       return (
@@ -8,10 +8,6 @@ const MyProfile = () => {
           {/* <h2>{props.profiles[0].name}</h2>
           <h4>{props.profiles[0].personality_character}: {props.profiles[0].personality_letters}</h4>
           <h4>{props.profiles[0].personality_letters}</h4> */}
-      {/* personality id: {props.profiles[0].personality_letters} */}
-          {/* <button className="menu-btn" onClick={props.handleLogout}>Logout</button>
-          {!props.loggedIn ? <Redirect to="/login"/> : null}  */}
-          {/* props.history.push("/") */}
         </div>
       )
   }

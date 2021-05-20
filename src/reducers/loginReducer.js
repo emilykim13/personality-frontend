@@ -11,14 +11,14 @@ const loginReducer = (state = initialState, action) => {
             ...state,
             username: action.username,
             password: action.password,
-            loggedIn: !state.loggedIn
+            loggedIn: true
             }
         case 'LOGOUT_USER':
             return {
             ...state,
             username: null,
             password: null,
-            loggedIn: !state.loggedIn
+            loggedIn: false
             }
         default: 
         return state

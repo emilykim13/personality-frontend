@@ -16,8 +16,6 @@ export const handleLogin = (logUser, history, dispatch) => {
     .then(res => res.json())
     .then(data => {
         localStorage.setItem("token", data.token)
-        // localStorage.token = data.token
-        // localStorage.username = data.username
         // localStorage.profiles = data.profiles
         dispatch({type: "LOGIN_USER", user: data})
         {data.token ? history.push('/home') : history.push('/login')}
@@ -25,7 +23,10 @@ export const handleLogin = (logUser, history, dispatch) => {
     console.log("YO")
 }
 
-
-export const handleLogout = () => {
-
+export const handleLogout = (history, dispatch) => {
+    localStorage.setItem("token", "")
+    localStorage.clear()
+    dispatch({type: "LOGOUT_USER"})
+    history.push('/login')
+    console.log("localStorage cleared")
 }

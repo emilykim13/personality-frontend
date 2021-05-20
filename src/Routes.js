@@ -6,13 +6,15 @@ import Login from "./components/Login.js"
 // import Menu from "./components/Menu.js"
 import MyProfile from "./components/MyProfile.js"
 import Personalities from "./components/Personalities.js"
+import Header from './Header.js'
 
 const Routes = (props) => {
     return(
         <Router>
             <Switch>
-                <Route path='/home' exact component = { props => <Home {...props} /> } />
                 <Route path='/login' exact component = { props => <Login {...props} /> } />
+            <Header />
+                <Route path='/home' exact component = { props => <Home {...props} /> } />
                 <Route path='/MyProfile' exact component = { props => <MyProfile {...props} /> } />
                 <Route path='/Personalities' exact component = { props => <Personalities {...props} /> } />
             </Switch>

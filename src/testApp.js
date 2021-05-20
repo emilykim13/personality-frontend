@@ -144,3 +144,24 @@
 // }
 
 // export default App;
+
+
+
+
+
+
+
+  // const dispatch = useDispatch()
+
+  // useEffect(()=> {
+  //   fetch("http://localhost:3000/api/v1/personalities", {
+  //     method: "GET",
+  //     headers: {
+        // "Content-Type" : "application/json",
+        // "Accept" : "application/json"
+  //     }
+  //   })
+  //   .then(res => res.json())
+  //   .then(personalityData => {console.log(personalityData)
+  //   })
+  // }, [])

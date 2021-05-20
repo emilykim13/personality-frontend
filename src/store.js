@@ -1,12 +1,14 @@
-import {createStore} from "redux"
-import {combineReducers} from "redux"
+import {combineReducers, applyMiddleware, createStore, compose} from "redux"
 import loginReducer from "./reducers/loginReducer"
+import personalitiesReducer from "./reducers/personalitiesReducer"
+import thunk from "redux-thunk"
 
 const rootReducer = combineReducers({
-    loginState: loginReducer
-
+    loginState: loginReducer,
+    personalitiesState: personalitiesReducer
 })
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(applyMiddleware(thunk)))
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(applyMiddleware(thunk)))
 
 export default store
