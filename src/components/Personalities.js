@@ -4,13 +4,12 @@ class MyProfile extends React.Component {
 
   
     render() {
+        // console.log(this.props)
       return (
         <div>
           <h1>Ni haody, this is my components/Personalities.js</h1>
-          <h2></h2>
-          {/* {console.log(this.props)} */}
-          <button onClick={this.props.handleLogout}>Logout</button>
-          {!this.props.loggedIn ? <Redirect to="/"/> : null} 
+          <button className="menu-btn" onClick={this.props.handleLogout}>Logout</button>
+          {!this.props.loggedIn ? <Redirect to="/login"/> : null} 
           {/* this.props.history.push("/") */}
         </div>
       )

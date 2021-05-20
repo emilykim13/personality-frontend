@@ -1,3 +1,31 @@
 .App {
   text-align: center;
 }
+
+
+.menu-btn {
+	box-shadow:inset 0px 1px 0px 0px #ffe866;
+	background:linear-gradient(to bottom, #de99d4 5%, #84f0d1 100%);
+	background-color:#de99d4;
+	border-radius:6px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#3200fa;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.menu-btn:hover {
+	background:linear-gradient(to bottom, #84f0d1 5%, #de99d4 100%);
+	background-color:#84f0d1;
+}
+.menu-btn:active {
+	position:relative;
+	top:1px;
+}
+
+        

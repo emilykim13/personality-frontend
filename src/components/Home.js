@@ -1,27 +1,17 @@
-import React from "react"
-import { Redirect } from "react-router-dom"
-class Home extends React.Component {
+import React from 'react'
+import { Redirect, Link } from "react-router-dom"
 
-  
-    render() {
-      return (
+const Home = (props) => {
+    return (
         <div>
-          <h1>Ni haody, this is my components/Home.js</h1>
-          {/* <p>{console.log(this.props.personalities)}</p> */}
-          {/* <button onClick={this.props.handleProfile}>Profile</button>
-          {!this.props.profile ? <Redirect to="/personalities"/> : null} */}
 
-          <button onClick={this.props.handleProfile}>Profile</button>
-          {!this.props.profile ? <Redirect to="/MyProfile"/> : null}
-          {/* stopped here */}
-          <br/><br/>
-          <button onClick={this.props.handleLogout}>Logout</button>
-          {!this.props.loggedIn ? <Redirect to="/"/> : null}
-          {/* this.props.history.push("/") */}
+          <h1>Ni haody, this is my components/Home.js</h1><br/><br/>
+          {/* <Link to="/MyProfile" className="menu-btn">Go to my Profile</Link><br/><br/>
+          <Link to="/personalities" className="menu-btn">Go to Personalities</Link><br/><br/> */}
+          <button className="menu-btn" onClick={props.handleLogout}>Logout</button>
+          {!props.loggedIn ? <Redirect to="/login"/> : null}
         </div>
-      )
-    }
-  }
-  
-  export default Home;
-  
+    )
+}
+
+export default Home
