@@ -11,7 +11,7 @@ const Routes = (props) => {
     return(
         <Router>
             <Switch>
-                <Route path='/' exact component = { props => <Home {...props} /> } />
+                <Route path='/home' exact component = { props => <Home {...props} /> } />
                 <Route path='/login' exact component = { props => <Login {...props} /> } />
                 <Route path='/MyProfile' exact component = { props => <MyProfile {...props} /> } />
                 <Route path='/Personalities' exact component = { props => <Personalities {...props} /> } />

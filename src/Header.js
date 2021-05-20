@@ -1,8 +1,9 @@
 import React from "react"
 import { Redirect } from "react-router-dom"
 import Menu from "./components/Menu.js"
-class Header extends React.Component {
-    render() {
+
+
+const Header = () => {
       return (
         <div>
           <h1>Ni haody, this is my Header.js</h1>
@@ -10,5 +11,4 @@ class Header extends React.Component {
         </div>
       )
     }
-  }
   export default Header;
