@@ -1,21 +1,21 @@
 import React from "react"
-import { Redirect } from "react-router-dom"
-class MyProfile extends React.Component {
+// import { Redirect } from "react-router-dom"
+import { useSelector, useDispatch } from 'react-redux'
+import { getPersonalities } from "../actions/getPersonalities"
+import PersonalityCard from "./PersonalityCard.js"
 
-  
-    render() {
+const Personalities = () => {
+  const pState = useSelector(state => state.personalitiesState)
+  const dispatch = useDispatch()
+  {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("Nope")}
       return (
         <div>
           <h1>Ni haody, this is my components/Personalities.js</h1>
-          <h2></h2>
-          {/* {console.log(this.props)} */}
-          <button onClick={this.props.handleLogout}>Logout</button>
-          {!this.props.loggedIn ? <Redirect to="/"/> : null} 
-          {/* this.props.history.push("/") */}
+          {/* {console.log(pState.personalities)} */}
+          {pState.personalities.map(personality => <PersonalityCard personality={personality} key={personality.id}/>)}
         </div>
       )
-    }
   }
   
-  export default MyProfile;
+  export default Personalities;
   
