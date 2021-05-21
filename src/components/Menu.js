@@ -10,9 +10,10 @@ const Menu = (props) => {
     return (
         <div>
             <p>This is my Menu.js</p>
-            <Link to="/MyProfile" className="menu-btn">Go to my Profile</Link><br/><br/>
-            <Link to="/personalities" className="menu-btn">Go to Personalities</Link><br/><br/>
-            <button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>test logout</button>
+            <Link to="/home" className="menu-btn">Home</Link><br/><br/>
+            <Link to="/MyProfile" className="menu-btn">Profile</Link><br/><br/>
+            <Link to="/personalities" className="menu-btn">Personalities</Link><br/><br/>
+            <button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>Logout</button>
         </div>
     )
 }

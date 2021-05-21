@@ -1,5 +1,5 @@
 import React from "react"
-import { useHistory, Redirect } from "react-router-dom"
+import { useHistory, Redirect, Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
 import { handleLogin } from "../actions/loginAction"
 
@@ -18,8 +18,9 @@ const Login = (props) => {
             <input type="password"/>
             <br/>
             <input className="menu-btn" type="submit" value="Login"/>
-            {console.log(logState.loggedIn)}
             {logState.loggedIn ? <Redirect to="/home"/> : null}
+            <br/><br/>
+            <Link to="/signup" className="menu-btn">Create a new account</Link><br/><br/>
         </form>
     )
 }

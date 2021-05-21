@@ -20,7 +20,7 @@ export const handleLogin = (logUser, history, dispatch) => {
         dispatch({type: "LOGIN_USER", user: data})
         {data.token ? history.push('/home') : history.push('/login')}
     })
-    console.log("YO")
+    // console.log("YO")
 }
 
 export const handleLogout = (history, dispatch) => {
@@ -28,5 +28,5 @@ export const handleLogout = (history, dispatch) => {
     localStorage.clear()
     dispatch({type: "LOGOUT_USER"})
     history.push('/login')
-    console.log("localStorage cleared")
+    // console.log("localStorage cleared")
 }

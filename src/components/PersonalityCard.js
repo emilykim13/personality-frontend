@@ -4,6 +4,7 @@ const personalityCard = (props) => {
     console.log(props)
     return (
         <div>
+            {console.log(props)}
             <br/><br/>
             <h1>The {props.personality.name} - {props.personality.letters}</h1>
         <div className="card">
