@@ -1,5 +1,23 @@
 const initialState = {
-    personalities: [],
+    personalities: [
+        {name: ""}, 
+        {letters: ""}, 
+        {summary: ""}, 
+        {image: ""}, 
+        {introduction: ""}, 
+        {intropp: ""}, 
+        {image_two: ""}, 
+        {firstpp: ""}, 
+        {secondpp: ""}, 
+        {thirdpp: ""}, 
+        {fourthpp: ""}, 
+        {fifthpp: ""}, 
+        {firstheader: ""}, 
+        {secondheader: ""}, 
+        {thirdheader: ""}, 
+        {fourthheader: ""}, 
+        {fifthheader: ""}
+    ],
     loadPersonalities: false
 }
 

@@ -7,12 +7,7 @@ import PersonalityCard from "./PersonalityCard.js"
 const Personalities = () => {
   const pState = useSelector(state => state.personalitiesState)
   const dispatch = useDispatch()
-
   {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("Nope")}
-  // if (!pState.loadPersonalities){
-    // dispatch(getPersonalities)
-  // }
-
       return (
         <div>
           <h1>Ni haody, this is my components/Personalities.js</h1>
