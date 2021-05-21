@@ -20,7 +20,23 @@ export const handleLogin = (logUser, history, dispatch) => {
         dispatch({type: "LOGIN_USER", user: data})
         {data.token ? history.push('/home') : history.push('/login')}
     })
-    // console.log("YO")
+}
+
+export const loadLogin = (dispatch) => {
+    const reqPackage={
+        method: "GET",
+        headers: {
+            "Content-Type" : "application/json",
+            "Accept" : "application/json",
+            "Authorization": `Bearer ${localStorage.token}`
+        }
+    }
+    fetch("http://localhost:3000/api/v1/loadlogin", reqPackage)
+    .then(res => res.json())
+    .then(data => {
+        dispatch({type: "GET_USERS", current_user: data})
+        // {loadUsers ? history.push('/login') : history.push('/login')}
+    })
 }
 
 export const handleLogout = (history, dispatch) => {
@@ -28,5 +44,7 @@ export const handleLogout = (history, dispatch) => {
     localStorage.clear()
     dispatch({type: "LOGOUT_USER"})
     history.push('/login')
-    // console.log("localStorage cleared")
 }
+
+
+// loadlogin
