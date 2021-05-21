@@ -13,7 +13,8 @@ const Menu = (props) => {
             <Link to="/home" className="menu-btn">Home</Link><br/><br/>
             <Link to="/MyProfile" className="menu-btn">Profile</Link><br/><br/>
             <Link to="/personalities" className="menu-btn">Personalities</Link><br/><br/>
-
+            <button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>Logout</button>
+            <br/><br/>
             <Link to="/architect" className="menu-btn">INTJ</Link>
             <Link to="/logician" className="menu-btn">INTP</Link>
             <Link to="/commander" className="menu-btn">ENTJ</Link>
@@ -33,7 +34,6 @@ const Menu = (props) => {
             <Link to="/adventurer" className="menu-btn">ISFP</Link>
             <Link to="/entreprenuer" className="menu-btn">ESTP</Link>
             <Link to="/entertainer" className="menu-btn">ESFP</Link><br/><br/>
-            <button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>Logout</button>
         </div>
     )
 }
