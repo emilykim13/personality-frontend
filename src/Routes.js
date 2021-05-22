@@ -8,6 +8,7 @@ import Personalities from "./components/Personalities.js"
 import Header from './Header.js'
 import { useSelector } from 'react-redux'
 
+
 import Architect from "./pomponents/Architect.js"
 import Logician from "./pomponents/Logician.js"
 import Commander from "./pomponents/Commander.js"

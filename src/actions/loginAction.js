@@ -40,7 +40,7 @@ export const loadLogin = (dispatch) => {
 }
 
 export const handleLogout = (history, dispatch) => {
-    localStorage.setItem("token", "")
+    // localStorage.setItem("token", "")
     localStorage.clear()
     dispatch({type: "LOGOUT_USER"})
     history.push('/login')

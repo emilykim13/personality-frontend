@@ -12,10 +12,10 @@ const Login = (props) => {
             handleLogin(e.target, props.history, dispatch)}}> 
             <h1>Please sign in: </h1>
             <label>email</label>
-            <input type="text"/>
+            <input required type="text"/>
             <br/>
             <label>password</label>
-            <input type="password"/>
+            <input required type="password"/>
             <br/>
             <input className="menu-btn" type="submit" value="Login"/>
             {logState.loggedIn ? <Redirect to="/home"/> : null}

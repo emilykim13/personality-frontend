@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
+import {Link} from "react-router-dom"
 import { getPersonalities } from "../actions/getPersonalities"
 
 const Architect = () => {
@@ -10,7 +11,7 @@ const Architect = () => {
 
       return (
         <div>
-          <img className="p-band" src={architect.image_two}></img>
+          <img className="p-band" src={architect.image_two} ></img>
           <h1>{architect.name}</h1>
           <h2>{architect.letters}</h2>
           <h1><strong>Introduction</strong></h1>

@@ -1,6 +1,7 @@
 const initialState = {
     users: [],
     loadUsers: false,
+    profiles: [],
     current_user: {}
 }
 
