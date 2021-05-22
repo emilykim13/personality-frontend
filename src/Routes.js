@@ -5,9 +5,9 @@ import Login from "./components/Login.js"
 import SignUp from "./components/SignUp.js"
 import MyProfile from "./components/MyProfile.js"
 import Personalities from "./components/Personalities.js"
+import EditUserForm from "./components/EditUserForm.js"
 import Header from './Header.js'
 import { useSelector } from 'react-redux'
-
 
 import Architect from "./pomponents/Architect.js"
 import Logician from "./pomponents/Logician.js"
@@ -37,6 +37,7 @@ const Routes = (props) => {
                 <Route path='/home' exact component = { props => <Home {...props} /> } />
                 <Route path='/MyProfile' exact component = { props => <MyProfile {...props} /> } />
                 <Route path='/personalities' exact component = { props => <Personalities {...props} /> } />
+                <Route path='/editAccount' exact component = { props => <EditUserForm {...props} /> } />
                 <Route path='/architect' exact component = { props => <Architect {...props} /> } />
                 <Route path='/logician' exact component = { props => <Logician {...props} /> } />
                 <Route path='/commander' exact component = { props => <Commander {...props} /> } />

@@ -5,7 +5,6 @@ export const handleSignUp = (logUser, history, dispatch) => {
         password: logUser[2].value,
         password_confirmation: logUser[3].value
     }
-    // console.log(logUser[3].value)
     const reqPackage={
         method: "POST",
         headers: {
@@ -19,10 +18,8 @@ export const handleSignUp = (logUser, history, dispatch) => {
     .then(res => res.json())
     .then(data => {
         localStorage.setItem("token", data.token)
-        // localStorage.profiles = data.profiles
         dispatch({type: "LOGIN_USER", user: data})
         {data.token != undefined ? history.push('/home') : history.push('/signup')}
     })
-    console.log("YO")
 }
 

@@ -45,6 +45,3 @@ export const handleLogout = (history, dispatch) => {
     dispatch({type: "LOGOUT_USER"})
     history.push('/login')
 }
-
-
-// loadlogin
