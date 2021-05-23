@@ -24,7 +24,7 @@ const initialState = {
 const personalitiesReducer = (state = initialState, action) => {
     switch(action.type){
         case "SET_PERSONALITIES":
-            console.log(action)
+            // console.log(action)
             return {
                 ...state,
                 personalities: action.personalities,

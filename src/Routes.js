@@ -33,6 +33,7 @@ import Tp3 from "./testComponents/Tp3.js"
 import Tp4 from "./testComponents/Tp4.js"
 import Tp5 from "./testComponents/Tp5.js"
 import Tp6 from "./testComponents/Tp6.js"
+import StartTest from "./testComponents/StartTest.js"
 
 
 const Routes = (props) => {
@@ -73,6 +74,7 @@ const Routes = (props) => {
                 <Route path='/tp5' exact component = { props => <Tp5 {...props} /> } />
                 <Route path='/tp6' exact component = { props => <Tp6 {...props} /> } />
                 <Route path='/results' exact component = { props => <Results {...props} /> } />
+                <Route path='/startTest' exact component = { props => <StartTest {...props} /> } />
 
 
             </Switch>
