@@ -3,6 +3,7 @@ import { Link, Redirect, useHistory } from "react-router-dom"
 import { handleLogout } from "../actions/loginAction"
 import { useDispatch, useSelector } from 'react-redux'
 import NavIcon from "./NavIcon.js"
+import TypesMenu from "./TypesMenu"
 
 const HomeMenu = () => {
     let logState = useSelector(state => state.loginState)
@@ -19,6 +20,8 @@ const HomeMenu = () => {
                 <li className="hm-li"><Link to="/MyProfile" className="menu-btn">Profile</Link></li>
                 <li className="hm-li"><Link to="/personalities" className="menu-btn">Personalities</Link></li>
                 <li className="hm-li"><Link to="/startTest" className="menu-btn">Take a test</Link></li>
+                <li className="hm-li"><TypesMenu/></li>
+
                 <li className="hm-li"><button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>Logout</button></li>
                 <br/><br/>
             </div> 
