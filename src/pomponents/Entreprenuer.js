@@ -22,7 +22,7 @@ const Entreprenuer = () => {
           <p>{entreprenuer.secondpp}</p><br/>
           <h4>{entreprenuer.thirdheader}</h4><br/>
           <p>{entreprenuer.thirdpp}</p><br/>
-          <img className="p-band" src={entreprenuer.image_two}></img>
+          <img className="p-band" src={entreprenuer.image_three}></img>
           <h4>{entreprenuer.fourtheader}</h4><br/>
           <p>{entreprenuer.fourthpp}</p><br/>
           <h4>{entreprenuer.fifthheader}</h4><br/>

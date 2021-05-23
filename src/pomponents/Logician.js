@@ -22,7 +22,7 @@ const Logician = () => {
           <p>{logician.secondpp}</p><br/>
           <h4>{logician.thirdheader}</h4><br/>
           <p>{logician.thirdpp}</p><br/>
-          <img className="p-band" src={logician.image_two}></img>
+          <img className="p-band" src={logician.image_three}></img>
           <h4>{logician.fourtheader}</h4><br/>
           <p>{logician.fourthpp}</p><br/>
           <h4>{logician.fifthheader}</h4><br/>

@@ -22,7 +22,7 @@ const Adventurer = () => {
           <p>{adventurer.secondpp}</p><br/>
           <h4>{adventurer.thirdheader}</h4><br/>
           <p>{adventurer.thirdpp}</p><br/>
-          <img className="p-band" src={adventurer.image_two}></img>
+          <img className="p-band" src={adventurer.image_three}></img>
           <h4>{adventurer.fourtheader}</h4><br/>
           <p>{adventurer.fourthpp}</p><br/>
           <h4>{adventurer.fifthheader}</h4><br/>

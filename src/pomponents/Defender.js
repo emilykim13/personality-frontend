@@ -22,7 +22,7 @@ const Defender = () => {
           <p>{defender.secondpp}</p><br/>
           <h4>{defender.thirdheader}</h4><br/>
           <p>{defender.thirdpp}</p><br/>
-          <img className="p-band" src={defender.image_two}></img>
+          <img className="p-band" src={defender.image_three}></img>
           <h4>{defender.fourtheader}</h4><br/>
           <p>{defender.fourthpp}</p><br/>
           <h4>{defender.fifthheader}</h4><br/>

@@ -22,7 +22,7 @@ const Virtuoso = () => {
           <p>{virtuoso.secondpp}</p><br/>
           <h4>{virtuoso.thirdheader}</h4><br/>
           <p>{virtuoso.thirdpp}</p><br/>
-          <img className="p-band" src={virtuoso.image_two}></img>
+          <img className="p-band" src={virtuoso.image_three}></img>
           <h4>{virtuoso.fourtheader}</h4><br/>
           <p>{virtuoso.fourthpp}</p><br/>
           <h4>{virtuoso.fifthheader}</h4><br/>

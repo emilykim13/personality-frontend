@@ -22,7 +22,7 @@ const Advocate = () => {
           <p>{advocate.secondpp}</p><br/>
           <h4>{advocate.thirdheader}</h4><br/>
           <p>{advocate.thirdpp}</p><br/>
-          <img className="p-band" src={advocate.image_two}></img>
+          <img className="p-band" src={advocate.image_three}></img>
           <h4>{advocate.fourtheader}</h4><br/>
           <p>{advocate.fourthpp}</p><br/>
           <h4>{advocate.fifthheader}</h4><br/>

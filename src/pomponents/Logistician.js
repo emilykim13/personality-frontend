@@ -22,7 +22,7 @@ const Logistician = () => {
           <p>{logistician.secondpp}</p><br/>
           <h4>{logistician.thirdheader}</h4><br/>
           <p>{logistician.thirdpp}</p><br/>
-          <img className="p-band" src={logistician.image_two}></img>
+          <img className="p-band" src={logistician.image_three}></img>
           <h4>{logistician.fourtheader}</h4><br/>
           <p>{logistician.fourthpp}</p><br/>
           <h4>{logistician.fifthheader}</h4><br/>

@@ -24,7 +24,7 @@ const Architect = () => {
           <p>{architect.secondpp}</p><br/>
           <h4>{architect.thirdheader}</h4><br/>
           <p>{architect.thirdpp}</p><br/>
-          <img className="p-band" src={architect.image_two}></img>
+          <img className="p-band" src={architect.image_three}></img>
           <h4>{architect.fourtheader}</h4><br/>
           <p>{architect.fourthpp}</p><br/>
           <h4>{architect.fifthheader}</h4><br/>

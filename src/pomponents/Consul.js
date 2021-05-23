@@ -22,7 +22,7 @@ const Consul = () => {
           <p>{consul.secondpp}</p><br/>
           <h4>{consul.thirdheader}</h4><br/>
           <p>{consul.thirdpp}</p><br/>
-          <img className="p-band" src={consul.image_two}></img>
+          <img className="p-band" src={consul.image_three}></img>
           <h4>{consul.fourtheader}</h4><br/>
           <p>{consul.fourthpp}</p><br/>
           <h4>{consul.fifthheader}</h4><br/>

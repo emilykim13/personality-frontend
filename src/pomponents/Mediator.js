@@ -22,7 +22,7 @@ const Mediator = () => {
           <p>{mediator.secondpp}</p><br/>
           <h4>{mediator.thirdheader}</h4><br/>
           <p>{mediator.thirdpp}</p><br/>
-          <img className="p-band" src={mediator.image_two}></img>
+          <img className="p-band" src={mediator.image_three}></img>
           <h4>{mediator.fourtheader}</h4><br/>
           <p>{mediator.fourthpp}</p><br/>
           <h4>{mediator.fifthheader}</h4><br/>

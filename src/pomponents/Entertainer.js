@@ -22,7 +22,7 @@ const Entertainer = () => {
           <p>{entertainer.secondpp}</p><br/>
           <h4>{entertainer.thirdheader}</h4><br/>
           <p>{entertainer.thirdpp}</p><br/>
-          <img className="p-band" src={entertainer.image_two}></img>
+          <img className="p-band" src={entertainer.image_three}></img>
           <h4>{entertainer.fourtheader}</h4><br/>
           <p>{entertainer.fourthpp}</p><br/>
           <h4>{entertainer.fifthheader}</h4><br/>

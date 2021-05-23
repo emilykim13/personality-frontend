@@ -22,7 +22,7 @@ const Debator = () => {
           <p>{debator.secondpp}</p><br/>
           <h4>{debator.thirdheader}</h4><br/>
           <p>{debator.thirdpp}</p><br/>
-          <img className="p-band" src={debator.image_two}></img>
+          <img className="p-band" src={debator.image_three}></img>
           <h4>{debator.fourtheader}</h4><br/>
           <p>{debator.fourthpp}</p><br/>
           <h4>{debator.fifthheader}</h4><br/>

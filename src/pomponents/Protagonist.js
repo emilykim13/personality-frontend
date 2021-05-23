@@ -22,7 +22,7 @@ const Protagonist = () => {
           <p>{protagonist.secondpp}</p><br/>
           <h4>{protagonist.thirdheader}</h4><br/>
           <p>{protagonist.thirdpp}</p><br/>
-          <img className="p-band" src={protagonist.image_two}></img>
+          <img className="p-band" src={protagonist.image_three}></img>
           <h4>{protagonist.fourtheader}</h4><br/>
           <p>{protagonist.fourthpp}</p><br/>
           <h4>{protagonist.fifthheader}</h4><br/>

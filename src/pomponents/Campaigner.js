@@ -22,7 +22,7 @@ const Campaigner = () => {
           <p>{campaigner.secondpp}</p><br/>
           <h4>{campaigner.thirdheader}</h4><br/>
           <p>{campaigner.thirdpp}</p><br/>
-          <img className="p-band" src={campaigner.image_two}></img>
+          <img className="p-band" src={campaigner.image_three}></img>
           <h4>{campaigner.fourtheader}</h4><br/>
           <p>{campaigner.fourthpp}</p><br/>
           <h4>{campaigner.fifthheader}</h4><br/>

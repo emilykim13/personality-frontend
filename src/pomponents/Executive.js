@@ -22,7 +22,7 @@ const Executive = () => {
           <p>{executive.secondpp}</p><br/>
           <h4>{executive.thirdheader}</h4><br/>
           <p>{executive.thirdpp}</p><br/>
-          <img className="p-band" src={executive.image_two}></img>
+          <img className="p-band" src={executive.image_three}></img>
           <h4>{executive.fourtheader}</h4><br/>
           <p>{executive.fourthpp}</p><br/>
           <h4>{executive.fifthheader}</h4><br/>
