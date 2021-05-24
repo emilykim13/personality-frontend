@@ -13,8 +13,11 @@ const StartTest = () => {
 
     return (
         <div>
+            <form>
             <h1>Start test page</h1>
-            {testQ.length == 0 ? null : <Tp1 />}
+            {testQ.length == 0 ? null : <Tp1/>}
+            {/* {testQ.length == 0 ? null : testQ.map(qs => <Tp1 question_string={qs.question_string}/>)} */}
+            </form>
         </div>
     )
 }
