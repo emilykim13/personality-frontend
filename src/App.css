@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 .App {
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: auto;
 }
 
 .menu-btn {
@@ -15,9 +19,16 @@
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:6px 20px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ded17c;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: auto;
+	/* padding-bottom: 2.5rem; */
+	/* width: 75%; */
+	margin: 0 auto;
 }
 .menu-btn:hover {
 	background:linear-gradient(to bottom, #84f0d1 5%, #de99d4 100%);
@@ -169,5 +180,23 @@
 .radio-row{
 	padding-bottom: 2.5rem;
 	width: 75%;
+	margin: 0 auto;
+  }
+
+  .img-band {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	justify-self: center;
+	height: 24rem;
+	width: auto;
+  }
+
+  .para-contain{
+	justify-self: center;
+	height: auto;
+	width: 35rem;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	margin: 0 auto;
   }

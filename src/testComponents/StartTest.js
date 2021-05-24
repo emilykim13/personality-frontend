@@ -12,11 +12,12 @@ const StartTest = () => {
     {!qState.loadQuestions ? dispatch(getQuestions) : console.log("nope - q1-10")}
 
     return (
-        <div>
+        <div className="App">
             <form>
-            <h1>Start test page</h1>
-            {testQ.length == 0 ? null : <Tp1/>}
-            {/* {testQ.length == 0 ? null : testQ.map(qs => <Tp1 question_string={qs.question_string}/>)} */}
+            <h1>WhoRU The Personality Test</h1>
+            {/* {testQ.length == 0 ? null : <Tp1/>} */}
+            {testQ.length == 0 ? null : testQ.map(qs => <Tp1 question_string={qs.question_string}/>)}
+            <button type="submit" className="menu-btn">Submit Test</button>
             </form>
         </div>
     )

@@ -5,6 +5,7 @@
 // const Tp1 = (props) => {
 //     const qState = useSelector(state => state.questionsState)
 //     const testQ = qState.questions
+//     const hi = `radio-answer${0}`
 
 //     return (
 //         <div>
@@ -14,7 +15,7 @@
 //                     {/* {console.log(props)} */}
 //                     <h4 className="question-text" >{props.question_string}</h4>
 //                     <label for="strongly-disagree">Strongly Disagree</label>
-//                     <input name="radio-answer" classname="radio-input" type="radio" id="strongly-disagree" value={3} checked={null} />
+//                     <input name={hi} classname="radio-input" type="radio" id="strongly-disagree" value={3} checked={null} />
 //                     <label for="disagree">Disagree</label>
 //                     <input name="radio-answer" type="radio" id="disagree" value={2} checked={null}/>
 //                     <label for="slgihtly-disagree">Slightly Disagree</label>
@@ -34,3 +35,6 @@
 // }
 
 // export default Tp1
+
+
+// {/* {testQ.length == 0 ? null : <Tp1/>} */}
