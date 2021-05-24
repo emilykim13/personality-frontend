@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { handleLogin } from "../actions/loginAction"
 
 const Login = (props) => {
-    let logState = useSelector(state => state.loginState)
+    let logState = useSelector(state => state.usersState)
     let dispatch = useDispatch()
     return (
         <form onSubmit={async (e) => {

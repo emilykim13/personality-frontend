@@ -6,20 +6,20 @@ const initialState = {
 
 const loginReducer = (state = initialState, action) => {
     switch(action.type){
-        case 'LOGIN_USER':
-            return {
-            ...state,
-            username: action.username,
-            password: action.password,
-            loggedIn: true
-            }
-        case 'LOGOUT_USER':
-            return {
-            ...state,
-            username: null,
-            password: null,
-            loggedIn: false
-            }
+        // case 'LOGIN_USER':
+        //     return {
+        //     ...state,
+        //     username: action.username,
+        //     password: action.password,
+        //     loggedIn: true
+        //     }
+        // case 'LOGOUT_USER':
+        //     return {
+        //     ...state,
+        //     username: null,
+        //     password: null,
+        //     loggedIn: false
+        //     }
         default: 
         return state
     }
