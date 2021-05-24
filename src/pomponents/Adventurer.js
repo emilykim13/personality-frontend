@@ -13,8 +13,8 @@ const Adventurer = () => {
           <h1>{adventurer.name}</h1>
           <h2>{adventurer.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{adventurer.introduction}</p><br/>
-          <p>{adventurer.intropp}</p><br/>
+          <p className="p-p-text">{adventurer.introduction}</p><br/>
+          <p >{adventurer.intropp}</p><br/>
           <img className="p-avatar" src={adventurer.image}></img>
           <h4>{adventurer.firstheader}</h4><br/>
           <p>{adventurer.firstpp}</p><br/>

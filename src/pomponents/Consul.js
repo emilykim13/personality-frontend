@@ -13,7 +13,7 @@ const Consul = () => {
           <h1>{consul.name}</h1>
           <h2>{consul.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{consul.introduction}</p><br/>
+          <p className="p-p-text" >{consul.introduction}</p><br/>
           <p>{consul.intropp}</p><br/>
           <img className="p-avatar" src={consul.image}></img>
           <h4>{consul.firstheader}</h4><br/>

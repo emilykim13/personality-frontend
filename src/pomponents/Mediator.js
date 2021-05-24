@@ -13,7 +13,7 @@ const Mediator = () => {
           <h1>{mediator.name}</h1>
           <h2>{mediator.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{mediator.introduction}</p><br/>
+          <p className="p-p-text" >{mediator.introduction}</p><br/>
           <p>{mediator.intropp}</p><br/>
           <img className="p-avatar" src={mediator.image}></img>
           <h4>{mediator.firstheader}</h4><br/>

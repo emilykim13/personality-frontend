@@ -15,7 +15,7 @@ const Architect = () => {
           <h1>{architect.name}</h1>
           <h2>{architect.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{architect.introduction}</p><br/>
+          <p className="p-p-text" >{architect.introduction}</p><br/>
           <p>{architect.intropp}</p><br/>
           <img className="p-avatar" src={architect.image}></img>
           <h4>{architect.firstheader}</h4><br/>

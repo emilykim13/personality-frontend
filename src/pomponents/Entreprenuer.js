@@ -13,7 +13,7 @@ const Entreprenuer = () => {
           <h1>{entreprenuer.name}</h1>
           <h2>{entreprenuer.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{entreprenuer.introduction}</p><br/>
+          <p className="p-p-text" >{entreprenuer.introduction}</p><br/>
           <p>{entreprenuer.intropp}</p><br/>
           <img className="p-avatar" src={entreprenuer.image}></img>
           <h4>{entreprenuer.firstheader}</h4><br/>

@@ -13,7 +13,7 @@ const Advocate = () => {
           <h1>{advocate.name}</h1>
           <h2>{advocate.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{advocate.introduction}</p><br/>
+          <p className="p-p-text" >{advocate.introduction}</p><br/>
           <p>{advocate.intropp}</p><br/>
           <img className="p-avatar" src={advocate.image}></img>
           <h4>{advocate.firstheader}</h4><br/>

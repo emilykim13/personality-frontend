@@ -13,7 +13,7 @@ const Virtuoso = () => {
           <h1>{virtuoso.name}</h1>
           <h2>{virtuoso.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{virtuoso.introduction}</p><br/>
+          <p className="p-p-text" >{virtuoso.introduction}</p><br/>
           <p>{virtuoso.intropp}</p><br/>
           <img className="p-avatar" src={virtuoso.image}></img>
           <h4>{virtuoso.firstheader}</h4><br/>

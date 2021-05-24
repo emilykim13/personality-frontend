@@ -13,7 +13,7 @@ const Tp2 = () => {
         <div>
             <h1>test page 2</h1>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[10].question_string}</h5>
+                <h3 className="question-text" >{testQ[10].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -30,7 +30,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[11].question_string}</h5>
+                <h3 className="question-text" >{testQ[11].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -47,7 +47,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[12].question_string}</h5>
+                <h3 className="question-text" >{testQ[12].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -64,7 +64,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[13].question_string}</h5>
+                <h3 className="question-text" >{testQ[13].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -81,7 +81,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[14].question_string}</h5>
+                <h3 className="question-text" >{testQ[14].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -98,7 +98,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[15].question_string}</h5>
+                <h3 className="question-text" >{testQ[15].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -115,7 +115,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[16].question_string}</h5>
+                <h3 className="question-text" >{testQ[16].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -132,7 +132,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[17].question_string}</h5>
+                <h3 className="question-text" >{testQ[17].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -149,7 +149,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[18].question_string}</h5>
+                <h3 className="question-text" >{testQ[18].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>
@@ -166,7 +166,7 @@ const Tp2 = () => {
                     <input name="radio-answer10" type="radio" id="strongly-agree" value={3} checked={null}/>
                 </div>
             <div className="radio-row">
-                <h5 className="question-text" >{testQ[19].question_string}</h5>
+                <h3 className="question-text" >{testQ[19].question_string}</h3>
                     <label for="strongly-disagree">Strongly Disagree</label>
                     <input classname="radio-input" name="radio-answer10" type="radio" id="strongly-disagree" value={3} checked={null} />
                     <label for="disagree">Disagree</label>

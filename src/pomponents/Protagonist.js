@@ -13,7 +13,7 @@ const Protagonist = () => {
           <h1>{protagonist.name}</h1>
           <h2>{protagonist.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{protagonist.introduction}</p><br/>
+          <p className="p-p-text" >{protagonist.introduction}</p><br/>
           <p>{protagonist.intropp}</p><br/>
           <img className="p-avatar" src={protagonist.image}></img>
           <h4>{protagonist.firstheader}</h4><br/>

@@ -13,7 +13,7 @@ const Campaigner = () => {
           <h1>{campaigner.name}</h1>
           <h2>{campaigner.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{campaigner.introduction}</p><br/>
+          <p className="p-p-text" >{campaigner.introduction}</p><br/>
           <p>{campaigner.intropp}</p><br/>
           <img className="p-avatar" src={campaigner.image}></img>
           <h4>{campaigner.firstheader}</h4><br/>

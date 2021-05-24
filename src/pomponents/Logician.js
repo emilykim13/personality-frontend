@@ -13,7 +13,7 @@ const Logician = () => {
           <h1>{logician.name}</h1>
           <h2>{logician.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{logician.introduction}</p><br/>
+          <p className="p-p-text" >{logician.introduction}</p><br/>
           <p>{logician.intropp}</p><br/>
           <img className="p-avatar" src={logician.image}></img>
           <h4>{logician.firstheader}</h4><br/>

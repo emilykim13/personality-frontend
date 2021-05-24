@@ -13,7 +13,7 @@ const Debator = () => {
           <h1>{debator.name}</h1>
           <h2>{debator.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{debator.introduction}</p><br/>
+          <p className="p-p-text" >{debator.introduction}</p><br/>
           <p>{debator.intropp}</p><br/>
           <img className="p-avatar" src={debator.image}></img>
           <h4>{debator.firstheader}</h4><br/>

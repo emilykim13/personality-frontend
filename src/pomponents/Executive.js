@@ -13,7 +13,7 @@ const Executive = () => {
           <h1>{executive.name}</h1>
           <h2>{executive.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{executive.introduction}</p><br/>
+          <p className="p-p-text" >{executive.introduction}</p><br/>
           <p>{executive.intropp}</p><br/>
           <img className="p-avatar" src={executive.image}></img>
           <h4>{executive.firstheader}</h4><br/>

@@ -13,7 +13,7 @@ const Logistician = () => {
           <h1>{logistician.name}</h1>
           <h2>{logistician.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{logistician.introduction}</p><br/>
+          <p className="p-p-text" >{logistician.introduction}</p><br/>
           <p>{logistician.intropp}</p><br/>
           <img className="p-avatar" src={logistician.image}></img>
           <h4>{logistician.firstheader}</h4><br/>

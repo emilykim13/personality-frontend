@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 .App {
   text-align: center;
 }
@@ -64,6 +65,7 @@
 	justify-self: center;
 	height: 30rem;
 	width: auto;
+	/* font-family: 'Quicksand', sans-serif; */
   }
         
 .header-menu{
@@ -142,6 +144,19 @@
 
 .question-text {
 	display: flex;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	width: auto;
+	align-items: center;
+	justify-content: center;
+	padding: 35px 0;
+	border: 2px;
+	color:rgb(55, 55, 80)
+}
+
+.p-p-text {
+	display: flex;
+	font-family: 'Quicksand', sans-serif;
 	text-align: center;
 	width: auto;
 	align-items: center;
