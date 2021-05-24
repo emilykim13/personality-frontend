@@ -1,9 +1,9 @@
 import React from 'react'
 import { updateUser } from "../actions/userAction"
 import { useDispatch, useSelector } from 'react-redux'
-import { Redirect } from 'react-router'
+import { Link } from 'react-router-dom'
 import { deleteUser } from '../actions/userAction'
-
+import DeleteUser from './DeleteUser.js'
 const EditUserForm = (props) => {
     const uState = useSelector(state => state.usersState)
     const myAccount = useSelector(state => state.usersState.current_user.user)
@@ -27,14 +27,8 @@ const EditUserForm = (props) => {
                 <br/>
                 <input className="menu-btn" type="submit" value="Update"/>
             </form>
-                {/* {<Redirect to="/home"/>} */}
+            <Link to="/delete" className="menu-btn">Delete Account</Link><br/><br/>
 
-            {/* // <button onClick={(e)=> {
-            //     e.preventDefault() 
-            //     dispatch(deleteUser(myAccount))}}>
-            //     DELETE MY ACCOUNT
-            // </button> */}
-          {/* {uState.deleted ? <Redirect to="/login" /> : <Redirect to="/home"/>} */}
         </div>
     )
 }

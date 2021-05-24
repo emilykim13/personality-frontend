@@ -1,5 +1,6 @@
 const initialState = {
     username: null,
+    email: null,
     password: null,
     loggedIn: false,
     loadUsers: false,
@@ -15,6 +16,7 @@ const usersReducer = (state = initialState, action) => {
             return {
             ...state,
             username: action.username,
+            email: action.email,
             password: action.password,
             loggedIn: true,
             current_user: action.current_user
@@ -23,9 +25,14 @@ const usersReducer = (state = initialState, action) => {
             return {
             ...state,
             username: null,
+            email: null,
             password: null,
             loggedIn: false,
-            current_user: null
+            loadUsers: false,
+            profiles: [],
+            current_user: {},
+            updated: false,
+            deleted: false
             }
         case "SET_USERS":
             // console.log(action)

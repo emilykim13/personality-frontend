@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp.js"
 import MyProfile from "./components/MyProfile.js"
 import Personalities from "./components/Personalities.js"
 import EditUserForm from "./components/EditUserForm.js"
+import DeleteUser from "./components/DeleteUser.js"
 import Header from './Header.js'
 import { useSelector } from 'react-redux'
 
@@ -75,6 +76,7 @@ const Routes = (props) => {
                 <Route path='/tp6' exact component = { props => <Tp6 {...props} /> } />
                 <Route path='/results' exact component = { props => <Results {...props} /> } />
                 <Route path='/startTest' exact component = { props => <StartTest {...props} /> } />
+                <Route path='/delete' exact component = { props => <DeleteUser {...props} /> } />
 
 
             </Switch>

@@ -1,15 +1,16 @@
-// export const deleteUser = (user) => {
-//     return dispatch => {
-//         fetch(`http://localhost:3000/api/v1/users/${user.id}`, {
-//             method:"DELETE",
-//             headers: {
-//                 Authorization: `Bearer ${localStorage.token}`
-//             }
-//         },
-//             dispatch({type: "DELETE_USER"})
-//         )
-//     }
-// }
+export const deleteUser = () => (dispatch) => {
+    console.log("hi")
+    fetch(`http://localhost:3000/api/v1/destroy`, {
+        method:"DELETE",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Authorization": `Bearer ${localStorage.token}`
+        }
+    })
+    .then(localStorage.clear())
+    .then(dispatch({type: "LOGOUT_USER"}))
+}
 
 export const updateUser = (e, user) => {
     return dispatch => {

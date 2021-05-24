@@ -12,7 +12,9 @@ const MyProfile = () => {
     console.log(myAccount)
     return (
         <div>
-          <h1>Ni haody, this is my components/MyProfile.js</h1>
+          <h1>Ni haody, {myAccount.name}!</h1>
+          <p>Username: {myAccount.name}</p>
+          <p>{myAccount.email}</p>
           <h1> Your latest personality type: {myProfiles[lastProfile].personality_letters} aka the {myProfiles[lastProfile].personality_character} </h1>
           <h1> You can read more about {myProfiles[lastProfile].personality_character}s and more <Link to="/personalities">here</Link>.</h1>
           <Link to="/editAccount" className="menu-btn">Edit Account</Link>

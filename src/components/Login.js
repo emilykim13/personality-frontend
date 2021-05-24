@@ -7,6 +7,8 @@ const Login = (props) => {
     let logState = useSelector(state => state.usersState)
     let dispatch = useDispatch()
     return (
+        <div>
+        {logState.loggedIn ? <Redirect to="/home"/> : null}
         <form onSubmit={async (e) => {
             e.preventDefault()
             handleLogin(e.target, props.history, dispatch)}}> 
@@ -22,6 +24,7 @@ const Login = (props) => {
             <br/><br/>
             <Link to="/signup" className="menu-btn">Create a new account</Link><br/><br/>
         </form>
+        </div>
     )
 }
   export default Login;
