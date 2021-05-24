@@ -12,7 +12,7 @@ export const deleteUser = () => (dispatch) => {
     .then(dispatch({type: "LOGOUT_USER"}))
 }
 
-export const updateUser = (e, user) => {
+export const updateUser = (e, user, history) => {
     return dispatch => {
         e.preventDefault()
         fetch(`http://localhost:3000/api/v1/users/${user.id}`, {
@@ -31,6 +31,7 @@ export const updateUser = (e, user) => {
             .then(res=>res.json())
             .then(updatedUser => {
             dispatch({type: "UPDATE_USER", current_user: updatedUser})
+            history.push('/home')
         })
     }
 }

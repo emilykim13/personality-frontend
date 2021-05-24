@@ -54,7 +54,7 @@ const usersReducer = (state = initialState, action) => {
                 current_user: action.current_user,
                 profiles: state.current_user.profiles,
                 loadUsers: true,
-                updated: true
+                updated: !state.updated
             }
             default: 
             return state

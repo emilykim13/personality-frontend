@@ -1,19 +1,20 @@
 import React from 'react'
 import { updateUser } from "../actions/userAction"
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { deleteUser } from '../actions/userAction'
 import DeleteUser from './DeleteUser.js'
 const EditUserForm = (props) => {
     const uState = useSelector(state => state.usersState)
     const myAccount = useSelector(state => state.usersState.current_user.user)
     const dispatch = useDispatch()
-
+    const updatedState = uState.updated
     return (
         <div>
+            {console.log(updatedState)}
             <form onSubmit={(e) => 
                 {e.preventDefault() 
-                dispatch(updateUser(e, myAccount))}
+                dispatch(updateUser(e, myAccount, props.history))}
                 }> 
                 <h1>Update account information: </h1>
                 <label>name:</label>
