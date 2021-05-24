@@ -177,6 +177,18 @@
 	color:rgb(55, 55, 80)
 }
 
+.p-s-text {
+	display: flex;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	width: auto;
+	align-items: center;
+	justify-content: center;
+	padding: 1px 0;
+	border: 2px;
+	color:rgb(55, 55, 80)
+}
+
 .radio-row{
 	padding-bottom: 2.5rem;
 	width: 75%;
@@ -199,4 +211,11 @@
 	justify-content: center;
 	text-align: center;
 	margin: 0 auto;
+  }
+
+  .head-img-band {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	justify-self: center;
+	height: 30rem;
+	width: auto;
   }
