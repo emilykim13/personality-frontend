@@ -3,7 +3,7 @@ import loginReducer from "./reducers/loginReducer"
 import personalitiesReducer from "./reducers/personalitiesReducer"
 import usersReducer from "./reducers/usersReducer"
 import questionsReducer from "./reducers/questionsReducer"
-import testReducer from "./reducers/testsReducer"
+import testsReducer from "./reducers/testsReducer"
 import thunk from "redux-thunk"
 
 const rootReducer = combineReducers({
@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
     personalitiesState: personalitiesReducer,
     usersState: usersReducer,
     questionsState: questionsReducer,
-    testsState: testReducer
+    testsState: testsReducer
 })
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(applyMiddleware(thunk)))

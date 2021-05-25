@@ -1,6 +1,8 @@
 import React from 'react'
 const initialState = {
-    test: {}
+    test: {},
+    results: {},
+    responses: []
 }
 
 const testsReducer = (state= initialState, action) => {
@@ -9,6 +11,13 @@ const testsReducer = (state= initialState, action) => {
             return {
                 ...state,
                 test: action.test
+            }
+            case 'SET_RESULTS':
+            return {
+                ...state,
+                test: action.test,
+                results: action.results,
+                responses: action.responses
             }
             default:
             return state

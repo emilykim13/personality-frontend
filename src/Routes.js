@@ -80,8 +80,6 @@ const Routes = (props) => {
                 <Route path='/startTest' exact component = { props => <StartTest {...props} /> } />
                 <Route path='/delete' exact component = { props => <DeleteUser {...props} /> } />
                 <Route path='/loadTest' exact component = { props => <LoadTest {...props} /> } />
-
-
             </Switch>
         </Router>
     )
