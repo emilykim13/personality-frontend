@@ -22,6 +22,7 @@ const HomeMenu = () => {
                 <li className="hm-li"><Link to="/loadTest" className="menu-btn">Take a test</Link></li>
                 <li className="hm-li"><TypesMenu/></li>
 
+
                 <li className="hm-li"><button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>Logout</button></li>
                 <br/><br/>
             </div> 

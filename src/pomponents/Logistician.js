@@ -8,7 +8,7 @@ const Logistician = () => {
   const logistician = pState.personalities[8]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={logistician.image_two}></img>
           <h1>{logistician.name}</h1>
           <h2>{logistician.letters}</h2>

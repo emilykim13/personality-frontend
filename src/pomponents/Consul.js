@@ -8,7 +8,7 @@ const Consul = () => {
   const consul = pState.personalities[11]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={consul.image_two}></img>
           <h1>{consul.name}</h1>
           <h2>{consul.letters}</h2>

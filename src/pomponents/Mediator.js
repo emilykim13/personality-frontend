@@ -8,7 +8,7 @@ const Mediator = () => {
   const mediator = pState.personalities[5]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={mediator.image_two}></img>
           <h1>{mediator.name}</h1>
           <h2>{mediator.letters}</h2>

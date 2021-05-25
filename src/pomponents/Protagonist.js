@@ -8,7 +8,7 @@ const Protagonist = () => {
   const protagonist = pState.personalities[6]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={protagonist.image_two}></img>
           <h1>{protagonist.name}</h1>
           <h2>{protagonist.letters}</h2>

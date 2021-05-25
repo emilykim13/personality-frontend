@@ -8,7 +8,7 @@ const Debator = () => {
   const debator = pState.personalities[3]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={debator.image_two}></img>
           <h1>{debator.name}</h1>
           <h2>{debator.letters}</h2>

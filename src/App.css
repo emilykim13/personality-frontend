@@ -247,3 +247,35 @@
 	position:relative;
 	top:1px;
 }
+
+.sign-in {
+	text-align: center;
+	align-items: center;
+	/* justify-content: center; */
+	text-align: center;
+	width: 90rem;
+	height: 90rem;
+	background-image: url(https://i.pinimg.com/originals/5e/80/2f/5e802f87d0e06290bf8ca860ab1d7dca.gif)
+}
+
+.sign-in-cont {
+	box-shadow:inset 0px 1px 0px 0px #939601f6;
+	background:linear-gradient(to bottom, #ff20cf 5%, #f56d13 100%);
+	background-color:#b999de;
+	border-radius:6px;
+	border:3px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}

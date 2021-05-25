@@ -8,7 +8,7 @@ const Commander = () => {
   const commander = pState.personalities[2]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={commander.image_two}></img>
           <h1>{commander.name}</h1>
           <h2>{commander.letters}</h2>

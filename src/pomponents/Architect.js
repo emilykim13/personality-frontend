@@ -10,7 +10,7 @@ const Architect = () => {
 //   {console.log(architect)}
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={architect.image_two} ></img>
           <h1>{architect.name}</h1>
           <h2>{architect.letters}</h2>
