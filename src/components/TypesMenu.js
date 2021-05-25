@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Redirect, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const TypesMenu = () => {
     return (

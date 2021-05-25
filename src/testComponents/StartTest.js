@@ -5,7 +5,7 @@ import { getQuestions } from "../actions/questionAction"
 import { handleResponses } from '../actions/testAction.js'
 
 
-const StartTest = () => {
+const StartTest = (props) => {
     const qState = useSelector(state => state.questionsState)
     const dispatch = useDispatch()
     const testQ = qState.questions
@@ -17,7 +17,7 @@ const StartTest = () => {
         <div className="App">
             <form onSubmit={(e) => {
                 e.preventDefault();
-                handleResponses(e, 4, quest_id, dispatch)
+                handleResponses(e, quest_id, dispatch, props.history)
             }}>
             <h1>WhoRU The Personality Test</h1>
             {testQ.length == 0 ? null : testQ.map(qs => <Tp1 question={qs}/>)}

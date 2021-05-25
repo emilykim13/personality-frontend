@@ -16,8 +16,7 @@ const testsReducer = (state= initialState, action) => {
             return {
                 ...state,
                 test: action.test,
-                results: action.results,
-                responses: action.responses
+                p_results: action.p_results
             }
             default:
             return state

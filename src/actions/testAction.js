@@ -21,7 +21,7 @@ export const handletest = (user, dispatch, history) => {
 }
 
 
-export const handleResponses = (e, test_id, quest_id, dispatch) => {
+export const handleResponses = (e, quest_id, dispatch, history) => {
     var rowsA = []
     var rowsB = []
     for ( var i = 0; i < 420; i++) {
@@ -40,7 +40,6 @@ export const handleResponses = (e, test_id, quest_id, dispatch) => {
     var indicesA = indices.map(index => rowsA[index])
     console.log(indicesA)
     let responses = {
-        test_id: test_id,
         question_id: quest_id,
         resps: indicesA
     }
@@ -57,7 +56,8 @@ export const handleResponses = (e, test_id, quest_id, dispatch) => {
     fetch("http://localhost:3000/api/v1/resdata", req)
     .then(res => res.json())
     .then(dataR => {
-        dispatch({type: "SET_RESULTS", test: dataR.test, results: dataR.results, responses: dataR})
+        dispatch({type: "SET_RESULTS", test: dataR, p_results: dataR.p_results})
+        history.push('/results')
     })
 
 
