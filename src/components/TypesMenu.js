@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link, Redirect, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const TypesMenu = () => {
     return (
-        <div className="right">
+        <div>
             <Link to="/architect" className="menu-btn">INTJ</Link>
             <Link to="/logician" className="menu-btn">INTP</Link>
             <Link to="/commander" className="menu-btn">ENTJ</Link>

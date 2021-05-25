@@ -8,12 +8,12 @@ const Commander = () => {
   const commander = pState.personalities[2]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={commander.image_two}></img>
           <h1>{commander.name}</h1>
           <h2>{commander.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{commander.introduction}</p><br/>
+          <p className="p-p-text" >{commander.introduction}</p><br/>
           <p>{commander.intropp}</p><br/>
           <img className="p-avatar" src={commander.image}></img>
           <h4>{commander.firstheader}</h4><br/>
@@ -22,7 +22,7 @@ const Commander = () => {
           <p>{commander.secondpp}</p><br/>
           <h4>{commander.thirdheader}</h4><br/>
           <p>{commander.thirdpp}</p><br/>
-          <img className="p-band" src={commander.image_two}></img>
+          <img className="p-band" src={commander.image_three}></img>
           <h4>{commander.fourtheader}</h4><br/>
           <p>{commander.fourthpp}</p><br/>
           <h4>{commander.fifthheader}</h4><br/>

@@ -8,12 +8,12 @@ const Protagonist = () => {
   const protagonist = pState.personalities[6]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={protagonist.image_two}></img>
           <h1>{protagonist.name}</h1>
           <h2>{protagonist.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{protagonist.introduction}</p><br/>
+          <p className="p-p-text" >{protagonist.introduction}</p><br/>
           <p>{protagonist.intropp}</p><br/>
           <img className="p-avatar" src={protagonist.image}></img>
           <h4>{protagonist.firstheader}</h4><br/>
@@ -22,7 +22,7 @@ const Protagonist = () => {
           <p>{protagonist.secondpp}</p><br/>
           <h4>{protagonist.thirdheader}</h4><br/>
           <p>{protagonist.thirdpp}</p><br/>
-          <img className="p-band" src={protagonist.image_two}></img>
+          <img className="p-band" src={protagonist.image_three}></img>
           <h4>{protagonist.fourtheader}</h4><br/>
           <p>{protagonist.fourthpp}</p><br/>
           <h4>{protagonist.fifthheader}</h4><br/>

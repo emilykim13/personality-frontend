@@ -1,5 +1,4 @@
 import React from "react"
-// import { Redirect } from "react-router-dom"
 import { useSelector, useDispatch } from 'react-redux'
 import { getPersonalities } from "../actions/getPersonalities"
 import PersonalityCard from "./PersonalityCard.js"
@@ -11,7 +10,6 @@ const Personalities = () => {
       return (
         <div>
           <h1>Ni haody, this is my components/Personalities.js</h1>
-          {/* {console.log(pState.personalities)} */}
           {pState.personalities.map(personality => <PersonalityCard personality={personality} key={personality.id}/>)}
         </div>
       )

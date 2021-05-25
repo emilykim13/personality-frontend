@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 .App {
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: auto;
 }
 
 .menu-btn {
@@ -14,9 +19,14 @@
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:6px 20px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ded17c;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: auto;
+	margin: 0 auto;
 }
 .menu-btn:hover {
 	background:linear-gradient(to bottom, #84f0d1 5%, #de99d4 100%);
@@ -64,6 +74,7 @@
 	justify-self: center;
 	height: 30rem;
 	width: auto;
+	/* font-family: 'Quicksand', sans-serif; */
   }
         
 .header-menu{
@@ -139,3 +150,132 @@
 	border: 3px solid #000000;
 	padding: 10px;
   }
+
+.question-text {
+	display: flex;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	width: auto;
+	align-items: center;
+	justify-content: center;
+	padding: 35px 0;
+	border: 2px;
+	color:rgb(55, 55, 80)
+}
+
+.p-p-text {
+	display: flex;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	width: auto;
+	align-items: center;
+	justify-content: center;
+	padding: 35px 0;
+	border: 2px;
+	color:rgb(55, 55, 80)
+}
+
+.p-s-text {
+	display: flex;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	width: auto;
+	align-items: center;
+	justify-content: center;
+	padding: 1px 0;
+	border: 2px;
+	color:rgb(55, 55, 80)
+}
+
+.radio-row{
+	padding-bottom: 2.5rem;
+	width: 75%;
+	margin: 0 auto;
+  }
+
+  .img-band {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	justify-self: center;
+	height: 24rem;
+	width: auto;
+  }
+
+  .para-contain{
+	justify-self: center;
+	height: auto;
+	width: 35rem;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 0 auto;
+  }
+
+  .head-img-band {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	justify-self: center;
+	height: 30rem;
+	width: auto;
+  }
+
+  .delete-btn {
+	box-shadow:inset 0px 1px 0px 0px #ff0c0c;
+	background:linear-gradient(to bottom, #de99d4 5%, #84f0d1 100%);
+	background-color:#de99d4;
+	border-radius:6px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#3200fa;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: auto;
+	margin: 0 auto;
+}
+.delete-btn:hover {
+	background:linear-gradient(to bottom, #84f0d1 5%, #ff0606 100%);
+	background-color:#84f0d1;
+}
+.delete-btn:active {
+	position:relative;
+	top:1px;
+}
+
+.sign-in {
+	text-align: center;
+	align-items: center;
+	/* justify-content: center; */
+	text-align: center;
+	width: 90rem;
+	height: 90rem;
+	background-image: url(https://i.pinimg.com/originals/5e/80/2f/5e802f87d0e06290bf8ca860ab1d7dca.gif)
+}
+
+.sign-in-cont {
+	box-shadow:inset 0px 1px 0px 0px #939601f6;
+	background:linear-gradient(to bottom, #ff20cf 5%, #f56d13 100%);
+	background-color:#b999de;
+	border-radius:6px;
+	border:3px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}

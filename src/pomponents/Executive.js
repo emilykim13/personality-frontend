@@ -8,12 +8,12 @@ const Executive = () => {
   const executive = pState.personalities[10]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={executive.image_two}></img>
           <h1>{executive.name}</h1>
           <h2>{executive.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{executive.introduction}</p><br/>
+          <p className="p-p-text" >{executive.introduction}</p><br/>
           <p>{executive.intropp}</p><br/>
           <img className="p-avatar" src={executive.image}></img>
           <h4>{executive.firstheader}</h4><br/>
@@ -22,7 +22,7 @@ const Executive = () => {
           <p>{executive.secondpp}</p><br/>
           <h4>{executive.thirdheader}</h4><br/>
           <p>{executive.thirdpp}</p><br/>
-          <img className="p-band" src={executive.image_two}></img>
+          <img className="p-band" src={executive.image_three}></img>
           <h4>{executive.fourtheader}</h4><br/>
           <p>{executive.fourthpp}</p><br/>
           <h4>{executive.fifthheader}</h4><br/>

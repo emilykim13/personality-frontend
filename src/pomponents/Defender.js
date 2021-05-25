@@ -8,12 +8,12 @@ const Defender = () => {
   const defender = pState.personalities[9]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={defender.image_two}></img>
           <h1>{defender.name}</h1>
           <h2>{defender.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{defender.introduction}</p><br/>
+          <p className="p-p-text" >{defender.introduction}</p><br/>
           <p>{defender.intropp}</p><br/>
           <img className="p-avatar" src={defender.image}></img>
           <h4>{defender.firstheader}</h4><br/>
@@ -22,7 +22,7 @@ const Defender = () => {
           <p>{defender.secondpp}</p><br/>
           <h4>{defender.thirdheader}</h4><br/>
           <p>{defender.thirdpp}</p><br/>
-          <img className="p-band" src={defender.image_two}></img>
+          <img className="p-band" src={defender.image_three}></img>
           <h4>{defender.fourtheader}</h4><br/>
           <p>{defender.fourthpp}</p><br/>
           <h4>{defender.fifthheader}</h4><br/>

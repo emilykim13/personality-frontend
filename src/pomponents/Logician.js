@@ -8,12 +8,12 @@ const Logician = () => {
   const logician = pState.personalities[1]
 
       return (
-        <div>
+        <div className="App">
           <img className="p-band" src={logician.image_two}></img>
           <h1>{logician.name}</h1>
           <h2>{logician.letters}</h2>
           <h1><strong>Introduction</strong></h1>
-          <p>{logician.introduction}</p><br/>
+          <p className="p-p-text" >{logician.introduction}</p><br/>
           <p>{logician.intropp}</p><br/>
           <img className="p-avatar" src={logician.image}></img>
           <h4>{logician.firstheader}</h4><br/>
@@ -22,7 +22,7 @@ const Logician = () => {
           <p>{logician.secondpp}</p><br/>
           <h4>{logician.thirdheader}</h4><br/>
           <p>{logician.thirdpp}</p><br/>
-          <img className="p-band" src={logician.image_two}></img>
+          <img className="p-band" src={logician.image_three}></img>
           <h4>{logician.fourtheader}</h4><br/>
           <p>{logician.fourthpp}</p><br/>
           <h4>{logician.fifthheader}</h4><br/>

@@ -9,7 +9,7 @@ const Menu = (props) => {
             <ul className="hm-ul">
             <p>This is my Menu.js</p>
             <HomeMenu/>
-            <TypesMenu/>
+            {/* <TypesMenu/> */}
             </ul>
         </div>
     )
