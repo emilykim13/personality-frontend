@@ -45,6 +45,7 @@ const Routes = (props) => {
         <Router>
                 {localStorage.token ? <Header /> : console.log("header not routed")}
                 {!localStorage.token && <Redirect to="/login"/>}
+                {/* {(localStorage.token == undefined) && <Redirect to="/login"/>} */}
             <Switch>
                 <Route path='/login' exact component = { props => <Login {...props} /> } />
                 <Route path='/signup' exact component = { props => <SignUp {...props} /> } />

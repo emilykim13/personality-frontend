@@ -1,10 +1,10 @@
 import React from 'react'
 import { Redirect, Link } from 'react-router-dom'
 
-const personalityCard = (props) => {
+const PersonalityCard = (props) => {
 
     const typeLink = `/${props.personality.name.toLowerCase()}`
-    console.log(typeLink)
+    // console.log(typeLink)
     return (
         <div>
             <br/><br/>
@@ -22,4 +22,4 @@ const personalityCard = (props) => {
     )
 }
 
-export default personalityCard
+export default PersonalityCard

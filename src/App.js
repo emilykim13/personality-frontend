@@ -3,6 +3,7 @@ import React, {useEffect} from "react"
 import Routes from './Routes.js';
 import {useDispatch, useSelector} from "react-redux"
 import { loadLogin } from "./actions/loginAction"
+import { getPersonalities } from './actions/getPersonalities';
 
 const App = (props) => {
   let loadState = useSelector(state => state.usersState)
@@ -10,7 +11,8 @@ const App = (props) => {
 
   useEffect(() => {
     if(localStorage.token){
-      loadLogin(dispatch)
+      loadLogin(dispatch);
+      // getPersonalities(dispatch)
     }
   }, [])
   

@@ -1,9 +1,16 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { useHistory, Redirect, Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
 import { handleLogin } from "../actions/loginAction"
+import { loadLogin } from "../actions/loginAction"
+
 
 const Login = (props) => {
+    useEffect(() => {
+        if(localStorage.token){
+          loadLogin(dispatch);
+        }
+      }, [])
     let logState = useSelector(state => state.usersState)
     let dispatch = useDispatch()
     return (
