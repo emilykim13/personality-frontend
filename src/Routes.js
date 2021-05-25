@@ -35,6 +35,8 @@ import Tp4 from "./testComponents/Tp4.js"
 import Tp5 from "./testComponents/Tp5.js"
 import Tp6 from "./testComponents/Tp6.js"
 import StartTest from "./testComponents/StartTest.js"
+import LoadTest from "./testComponents/LoadTest.js"
+
 
 
 const Routes = (props) => {
@@ -77,6 +79,7 @@ const Routes = (props) => {
                 <Route path='/results' exact component = { props => <Results {...props} /> } />
                 <Route path='/startTest' exact component = { props => <StartTest {...props} /> } />
                 <Route path='/delete' exact component = { props => <DeleteUser {...props} /> } />
+                <Route path='/loadTest' exact component = { props => <LoadTest {...props} /> } />
 
 
             </Switch>

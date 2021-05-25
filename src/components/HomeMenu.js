@@ -19,7 +19,7 @@ const HomeMenu = () => {
                 <li className="hm-li"><Link className="menu-btn" to="/home">Home</Link></li>
                 <li className="hm-li">{logState.current_user.profiles.length > 0 ? <Link to="/MyProfile" className="menu-btn">Profile</Link> : null}</li>
                 <li className="hm-li"><Link to="/personalities" className="menu-btn">Personalities</Link></li>
-                <li className="hm-li"><Link to="/startTest" className="menu-btn">Take a test</Link></li>
+                <li className="hm-li"><Link to="/loadTest" className="menu-btn">Take a test</Link></li>
                 <li className="hm-li"><TypesMenu/></li>
 
                 <li className="hm-li"><button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>Logout</button></li>
