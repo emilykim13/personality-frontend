@@ -8,7 +8,7 @@ const Results = () => {
     console.log(testState)
     const linkydoo = `${testState.p_results[0].name.toLowerCase()}`
     return (
-        <div>
+        <div className="App">
             <h1>THE RESULTSSSS!</h1>
             <h1>Your personality type is: {testState.p_results[0].name}!</h1>
             <Link to={linkydoo} className="menu-btn">{testState.p_results[0].name}!</Link>
