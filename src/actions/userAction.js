@@ -5,7 +5,7 @@ export const deleteUser = () => (dispatch) => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
     })
     .then(localStorage.clear())
@@ -20,7 +20,7 @@ export const updateUser = (e, user, history) => {
             headers:{
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                "Authorization": `Bearer ${localStorage.token}`
+                "Authorization": `Bearer ${localStorage.getItem("token")}`
             },
             body: JSON.stringify({
                 name: e.target[0].value,

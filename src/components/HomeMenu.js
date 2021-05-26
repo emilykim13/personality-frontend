@@ -3,6 +3,7 @@ import { Link, Redirect, useHistory } from "react-router-dom"
 import { handleLogout } from "../actions/loginAction"
 import { useDispatch, useSelector } from 'react-redux'
 import NavIcon from "./NavIcon.js"
+import PNavIcon from "./PNavIcon.js"
 import TypesMenu from "./TypesMenu"
 
 const HomeMenu = () => {
@@ -20,7 +21,8 @@ const HomeMenu = () => {
                 <li className="hm-li">{logState.current_user.profiles.length > 0 ? <Link to="/MyProfile" onClick={() => setDisplay(!displayState)}className="menu-btn">Profile</Link> : null}</li>
                 <li className="hm-li"><Link to="/personalities" className="menu-btn" onClick={() => setDisplay(!displayState)}>Personalities</Link></li>
                 <li className="hm-li"><Link to="/loadTest" className="menu-btn" onClick={() => setDisplay(!displayState)}>Take a test</Link></li>
-                <li className="hm-li"><TypesMenu/></li>
+
+                {/* <li className="hm-li"><TypesMenu/></li> */}
 
 
                 <li className="hm-li"><button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>Logout</button></li>

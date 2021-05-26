@@ -8,7 +8,7 @@ export const handleLogin = (logUser, history, dispatch) => {
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify(user)
     }
@@ -28,7 +28,7 @@ export const loadLogin = (dispatch) => {
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
     }
     fetch("http://localhost:3000/api/v1/loadlogin", reqPackage)

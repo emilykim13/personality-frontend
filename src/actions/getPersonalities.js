@@ -11,7 +11,7 @@ export const getPersonalities = dispatch => {
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
     })
     .then(res => res.json())
