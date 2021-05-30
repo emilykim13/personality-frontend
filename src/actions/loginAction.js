@@ -17,6 +17,7 @@ export const handleLogin = (logUser, history, dispatch) => {
     .then(data => {
         {data.token === undefined ? localStorage.clear() : localStorage.setItem("token", data.token)}
         {data.token === undefined ? history.push('/login') : history.push('/home')}
+        // {data.token === undefined ? alert("INVALID! TRY AGAIN.") : history.push('/home')}
         // localStorage.profiles = data.profiles
         // console.log(data.token)
         dispatch({type: "LOGIN_USER", current_user: data, email: logUser[0].value})

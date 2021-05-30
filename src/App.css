@@ -131,9 +131,6 @@
 }
 
 .home-btn {
-	/* width: 25px;
-	height: 4px;
-	background-color: #333; */
 	margin: 2px 0;
 	width: auto;
 	right: 0px;
@@ -276,7 +273,6 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#000000;
-	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 20px;
@@ -287,4 +283,9 @@
 	text-align: center;
 	width: 50%;
 	margin: 0 auto;
+}
+
+
+*{
+font-family: 'Quicksand', sans-serif;
 }
