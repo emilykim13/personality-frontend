@@ -15,10 +15,16 @@ const MyProfile = (props) => {
 //  const myProfiles = useSelector(state => (state.usersState.current_user.profiles === []) ? "berto" : state.usersState.current_user.profiles );
 //   const myRawTests = useSelector(state => (state.usersState.current_user.tests === []) ? "emers" : state.usersState.current_user.tests);
   
-console.log(testing.tests.length)
-   const myProfiles = (testing.profiles.length === 0) ? "berto" : testing.profiles 
+console.log(testing.profiles.length)
+  const myProfiles = (testing.profiles.length === 0) ? "berto" : testing.profiles 
   const myRawTests = (testing.tests.length === 0) ? "emers" : testing.tests
   
+
+  const lastProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -lastProfile") : myProfiles.length - 1 
+  // const currentProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -currentProfile") :  myProfiles.filter(p => p.id === myProfiles[lastProfile].id)[0]
+  const currentProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -currentProfile") :  myProfiles[lastProfile]
+
+  // myProfiles[lastProfile]
 
   // const myProfiles = testing.profiles === [] ? "berto" : useSelector(state => (state.usersState.current_user.profiles));
   // const myRawTests = testing.tests === [] ? "emers" : useSelector(state => (state.usersState.current_user.tests));
@@ -55,6 +61,7 @@ console.log(testing.tests.length)
             <h1>Ni haody, {myAccount.name}!</h1>
             <p>Username: {myAccount.name}</p>
             <p>{myAccount.email}</p>
+            <p>{currentProfile.username}</p>
             <h1> You have not taken the WhoRU Personality Test yet, please take the test to view your results here! </h1>
             <Link to="/editAccount" className="menu-btn">Edit Account</Link>
           </div>
