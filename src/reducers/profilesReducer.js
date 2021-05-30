@@ -1,14 +1,16 @@
 const initialState = {
     profiles: [],
+    current_profile: []
 }
 
 
 const profilesReducer = (state=initialState, action) => {
     switch(action.type){
-        case 'GET_PROFILES':
+        case 'SET_PROFILES':
             return {
                 ...state,
-                profiles: action.profiles
+                profiles: action.profiles,
+                current_profile: action.profile
             }
         default:
             return state

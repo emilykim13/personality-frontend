@@ -4,11 +4,11 @@ const initialState = {
     password: null,
     loggedIn: false,
     loadUsers: false,
-    profiles: [],
+    // profiles: [],
     current_user: {},
     updated: false,
     deleted: false,
-    tests: []
+    // tests: []
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -30,11 +30,11 @@ const usersReducer = (state = initialState, action) => {
             password: null,
             loggedIn: false,
             loadUsers: false,
-            profiles: [],
+            // profiles: [],
             current_user: {},
             updated: false,
             deleted: false,
-            tests: []
+            // tests: []
             }
         case "SET_USERS":
             // console.log(action)
@@ -51,10 +51,12 @@ const usersReducer = (state = initialState, action) => {
                 loadUsers: true
             }
         case "UPDATE_USER":
+            console.log(action)
             return{
                 ...state, 
                 current_user: action.current_user,
-                profiles: state.current_user.profiles,
+                // profiles: action.current_user.profiles,
+                // tests: action.current_user.tests,
                 loadUsers: true,
                 updated: !state.updated
             }

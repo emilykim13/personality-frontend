@@ -1,6 +1,6 @@
 export const handleLogin = (logUser, history, dispatch) => {
     let user = {
-        name: logUser[0].value,
+        email: logUser[0].value,
         password: logUser[1].value
     }
     const reqPackage={
@@ -17,15 +17,9 @@ export const handleLogin = (logUser, history, dispatch) => {
     .then(data => {
         {data.token === undefined ? localStorage.clear() : localStorage.setItem("token", data.token)}
         {data.token === undefined ? history.push('/login') : history.push('/home')}
-        // {data.token === undefined ? alert("INVALID! TRY AGAIN.") : history.push('/home')}
-        // localStorage.profiles = data.profiles
-        // console.log(data.token)
-        dispatch({type: "LOGIN_USER", current_user: data, email: logUser[0].value})
-        // if(localStorage.token === undefined){
-            //     history.push("/login")
-            // }
+        dispatch({type: "LOGIN_USER", current_user: data})
         })
-        // .then(console.log(localStorage.token))
+
 }
 
 export const loadLogin = (dispatch) => {

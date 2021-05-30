@@ -18,7 +18,7 @@ const HomeMenu = () => {
             displayState ? 
             <div>
                 <li className="hm-li"><Link onClick={() => setDisplay(!displayState)}className="menu-btn" to="/home">Home</Link></li>
-                <li className="hm-li">{logState.current_user.profiles.length > 0 ? <Link to="/MyProfile" onClick={() => setDisplay(!displayState)}className="menu-btn">Profile</Link> : null}</li>
+                <li className="hm-li"><Link to="/MyProfile" onClick={() => setDisplay(!displayState)}className="menu-btn">Profile</Link></li>
                 <li className="hm-li"><Link to="/personalities" className="menu-btn" onClick={() => setDisplay(!displayState)}>Personalities</Link></li>
                 <li className="hm-li"><Link to="/loadTest" className="menu-btn" onClick={() => setDisplay(!displayState)}>Take a test</Link></li>
 
