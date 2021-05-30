@@ -1,22 +1,34 @@
 import React from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { deleteUser } from '../actions/userAction'
-import EditUserForm from "./EditUserForm.js"
-const MyProfile = () => {
+const MyProfile = (props) => {
   const dispatch = useDispatch()
-  const myProfileState = useSelector(state => state.usersState)
+
   const myProfiles = useSelector(state => state.usersState.current_user.profiles)
   const myAccount = useSelector(state => state.usersState.current_user.user)
-  let lastProfile = myProfiles.length > 0 ? myProfiles.length - 1 : null
-    console.log(myAccount)
+  const myRawTests = useSelector(state => state.usersState.current_user.tests)
+  console.log(myRawTests)
+  const myTests = myRawTests.filter(test => test.results !== null)
+  const lastIndex = myTests.length - 1
+
+  const prsnts = useSelector(state => state.personalitiesState.personalities)
+  console.log(prsnts)
+  const filteredPersonality = prsnts.filter(p => p.letters === myTests[lastIndex].results)[0]
+  console.log(filteredPersonality)
+  const linkyloo = `/${filteredPersonality.name.toLowerCase()}`
+  // let lastProfile = myProfiles.length > 0 ? myProfiles.length - 1 : null
+    // console.log(myAccount)
     return (
-        <div>
+        <div className="App">
           <h1>Ni haody, {myAccount.name}!</h1>
           <p>Username: {myAccount.name}</p>
           <p>{myAccount.email}</p>
-          <h1> Your latest personality type: {myProfiles[lastProfile].personality_letters} aka the {myProfiles[lastProfile].personality_character} </h1>
-          <h1> You can read more about {myProfiles[lastProfile].personality_character}s and more <Link to="/personalities">here</Link>.</h1>
+          {/* <h1> Your latest personality type: {myProfiles[lastProfile].personality_letters} aka the {myProfiles[lastProfile].personality_character} </h1> */}
+          <h1> Your latest personality type: {myTests[lastIndex].results}</h1>
+          <img onClick={() => props.history.push(linkyloo)} className="p-avatar" src={filteredPersonality.image}></img>
+          <p>{filteredPersonality.introduction}</p>
+          <p>{filteredPersonality.intropp}</p>
+          <h1> You can read more about <Link to={linkyloo}>{filteredPersonality.name}s</Link> and other personality types <Link to="/personalities">here</Link>.</h1>
           <Link to="/editAccount" className="menu-btn">Edit Account</Link>
         </div>
       )

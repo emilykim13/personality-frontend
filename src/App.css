@@ -67,6 +67,7 @@
 	justify-self: center;
 	height: 16rem;
 	width: auto;
+	cursor:pointer;
   }
 
 .p-band {

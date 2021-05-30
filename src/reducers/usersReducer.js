@@ -7,7 +7,8 @@ const initialState = {
     profiles: [],
     current_user: {},
     updated: false,
-    deleted: false
+    deleted: false,
+    tests: []
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -32,7 +33,8 @@ const usersReducer = (state = initialState, action) => {
             profiles: [],
             current_user: {},
             updated: false,
-            deleted: false
+            deleted: false,
+            tests: []
             }
         case "SET_USERS":
             // console.log(action)

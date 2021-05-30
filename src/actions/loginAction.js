@@ -41,9 +41,9 @@ export const loadLogin = (dispatch) => {
     .then(res => res.json())
     .then(data => {
         dispatch({type: "GET_USERS", current_user: data})
-        // {loadUsers ? history.push('/login') : history.push('/login')}
+        // dispatch({type: "LOGIN_USER", current_user: data})
     })
-    
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     const personalitiesUrl = "http://localhost:3000/api/v1/personalities"
     const reqq ={
         method: "GET",
@@ -58,6 +58,7 @@ export const loadLogin = (dispatch) => {
     .then(pData => {
         dispatch({type: "SET_PERSONALITIES", personalities: pData})
     })
+
 }
 
 export const handleLogout = (history, dispatch) => {
