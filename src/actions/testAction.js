@@ -22,9 +22,9 @@ export const handletest = (user, dispatch, history) => {
 
 
 export const handleResponses = (e, quest_id, dispatch, history) => {
-    var rowsA = []
-    var rowsB = []
-    for ( var i = 0; i < 420; i++) {
+    let rowsA = []
+    let rowsB = []
+    for ( let i = 0; i < 420; i++) {
         {
             rowsA.push(e.target[i].value); 
             rowsB.push(e.target[i].checked)
@@ -37,7 +37,7 @@ export const handleResponses = (e, quest_id, dispatch, history) => {
     // console.log(indices)
 
     // 60 responses 
-    var indicesA = indices.map(index => rowsA[index])
+    let indicesA = indices.map(index => rowsA[index])
     console.log(indicesA)
     let responses = {
         question_id: quest_id,

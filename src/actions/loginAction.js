@@ -15,11 +15,16 @@ export const handleLogin = (logUser, history, dispatch) => {
     fetch("http://localhost:3000/api/v1/login", reqPackage)
     .then(res => res.json())
     .then(data => {
-        localStorage.setItem("token", data.token)
+        {data.token === undefined ? localStorage.clear() : localStorage.setItem("token", data.token)}
+        {data.token === undefined ? history.push('/login') : history.push('/home')}
         // localStorage.profiles = data.profiles
+        // console.log(data.token)
         dispatch({type: "LOGIN_USER", current_user: data, email: logUser[0].value})
-        {data.token ? history.push('/home') : history.push('/login')}
-    })
+        // if(localStorage.token === undefined){
+            //     history.push("/login")
+            // }
+        })
+        // .then(console.log(localStorage.token))
 }
 
 export const loadLogin = (dispatch) => {

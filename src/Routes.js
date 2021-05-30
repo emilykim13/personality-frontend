@@ -43,9 +43,10 @@ const Routes = (props) => {
     let logState = useSelector(state => state.loginState)
     return(
         <Router>
+                {/* {!localStorage.token ? <Redirect to="/login"/> : null}
+                {localStorage.token === undefined ? <Redirect to="/login"/> : null} */}
+                {!localStorage.token && (localStorage.token === undefined) && <Redirect to="/login"/>}
                 {localStorage.token ? <Header /> : console.log("header not routed")}
-                {!localStorage.token && <Redirect to="/login"/>}
-                {/* {(localStorage.token == undefined) && <Redirect to="/login"/>} */}
             <Switch>
                 <Route path='/login' exact component = { props => <Login {...props} /> } />
                 <Route path='/signup' exact component = { props => <SignUp {...props} /> } />
