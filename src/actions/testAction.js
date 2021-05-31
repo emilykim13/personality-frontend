@@ -1,4 +1,3 @@
-
 export const handletest = (user, dispatch, history) => {
     let test = {
         user_id: user.id
@@ -20,7 +19,6 @@ export const handletest = (user, dispatch, history) => {
     })
 }
 
-
 export const handleResponses = (e, quest_id, dispatch, history) => {
     let rowsA = []
     let rowsB = []
@@ -34,16 +32,12 @@ export const handleResponses = (e, quest_id, dispatch, history) => {
         (out, bool, index) => bool ? out.concat(index) : out, 
         []
       )
-    // console.log(indices)
-
-    // 60 responses 
     let indicesA = indices.map(index => rowsA[index])
     console.log(indicesA)
     let responses = {
         question_id: quest_id,
         resps: indicesA
     }
-
     const req ={
         method: "POST",
         headers: {
@@ -56,10 +50,7 @@ export const handleResponses = (e, quest_id, dispatch, history) => {
     fetch("http://localhost:3000/api/v1/resdata", req)
     .then(res => res.json())
     .then(dataR => {
-        // debugger
         dispatch({type: "UPDATE_USER", current_user: dataR})
         history.push('/results')
     })
-
-
 }

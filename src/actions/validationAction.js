@@ -1,9 +1,7 @@
 export const handleSignValidation = (e, vData) => {
-
     const {name, value} = e.target
     const validationData = vData
     const emailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)
-
     switch(name) {
         case "NAME":
             validationData.errors.name = value.length < 1 ? "Name form must be filled in." : ""

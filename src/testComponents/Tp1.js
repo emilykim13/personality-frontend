@@ -1,14 +1,7 @@
 import React from 'react'
-import {Link} from "react-router-dom"
-import { useSelector, useDispatch } from 'react-redux'
-import { handleResponses } from "../actions/testAction"
 
 const Tp1 = (props) => {
-    const dispatch = useDispatch()
-    const qState = useSelector(state => state.questionsState)
-    const testQ = qState.questions
     const hi = `radio-answer${props.question.question_string}`
-
     return (
         <div>
             <div className="radio-row">
@@ -31,13 +24,5 @@ const Tp1 = (props) => {
         </div>
     )
 }
-// onClick={(e) => console.log(e)} 
-// onClick={(e) => console.log(e)} 
-// onClick={(e) => console.log(e)} 
-// onClick={(e) => console.log(e)} 
-// onClick={(e) => console.log(e)} 
-// onClick={(e) => console.log(e)} 
-// onClick={(e) => console.log(e)} 
-
 
 export default Tp1

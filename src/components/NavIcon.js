@@ -1,7 +1,6 @@
 import React from 'react'
 
 const NavIcon = () => {
-
     return (
         <div>
             <div className="container-menu" >

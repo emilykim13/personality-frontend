@@ -3,7 +3,6 @@ const initialState = {
     current_profile: []
 }
 
-
 const profilesReducer = (state=initialState, action) => {
     switch(action.type){
         case 'SET_PROFILES':

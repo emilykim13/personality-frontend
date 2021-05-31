@@ -25,7 +25,6 @@ export const updateUser = (e, user, history) => {
             body: JSON.stringify({
                 name: e.target[0].value,
                 email: e.target[1].value
-                
                 })
             })
             .then(res=>res.json())

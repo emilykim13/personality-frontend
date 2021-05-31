@@ -1,14 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux'
-import {Link} from "react-router-dom"
-import { getPersonalities } from "../actions/getPersonalities"
+import { useSelector } from 'react-redux'
 
 const Architect = () => {
   const pState = useSelector(state => state.personalitiesState)
-  const dispatch = useDispatch()
-  // {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - architect")}
   const architect = pState.personalities[0]
-//   {console.log(architect)}
-
       return (
         <div className="App">
           <img className="p-band" src={architect.image_two} ></img>
