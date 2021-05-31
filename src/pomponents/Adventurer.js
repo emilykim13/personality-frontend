@@ -1,12 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { getPersonalities } from "../actions/getPersonalities"
+import { useSelector } from 'react-redux'
 
-const Adventurer = (props) => {
+const Adventurer = () => {
   const pState = useSelector(state => state.personalitiesState)
-  const dispatch = useDispatch()
-  // {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - adventurer")}
   const adventurer = pState.personalities[13]
-
   return (
     <div className="App">
           <img className="p-band" src={adventurer.image_two}></img>

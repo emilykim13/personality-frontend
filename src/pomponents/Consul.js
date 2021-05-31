@@ -1,12 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { getPersonalities } from "../actions/getPersonalities"
+import { useSelector } from 'react-redux'
 
 const Consul = () => {
   const pState = useSelector(state => state.personalitiesState)
-  const dispatch = useDispatch()
-  // {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - consul")}
   const consul = pState.personalities[11]
-
       return (
         <div className="App">
           <img className="p-band" src={consul.image_two}></img>

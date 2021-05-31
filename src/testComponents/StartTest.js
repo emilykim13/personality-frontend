@@ -4,15 +4,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getQuestions } from "../actions/questionAction"
 import { handleResponses } from '../actions/testAction.js'
 
-
 const StartTest = (props) => {
     const qState = useSelector(state => state.questionsState)
     const dispatch = useDispatch()
     const testQ = qState.questions
     {!qState.loadQuestions ? dispatch(getQuestions) : console.log("nope - tp1")}
     const quest_id = testQ.map(q => q.id)
-    // const test_id = useSelector(state=>state.testsState.test.test.id)
-    // console.log(test_id)
     return (
         <div className="App">
             <form onSubmit={(e) => {

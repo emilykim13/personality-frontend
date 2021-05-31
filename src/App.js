@@ -4,7 +4,7 @@ import Routes from './Routes.js';
 import {useDispatch, useSelector} from "react-redux"
 import { loadLogin } from "./actions/loginAction"
 
-const App = (props) => {
+const App = () => {
   const loggedIn = useSelector(state => state.usersState.loggedIn)
   const dispatch = useDispatch()
 

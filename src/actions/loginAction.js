@@ -36,7 +36,7 @@ export const loadLogin = (dispatch) => {
     .then(data => {
         dispatch({type: "SET_USER"})
     })
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>ANOTHER FETCH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     const personalitiesUrl = "http://localhost:3000/api/v1/personalities"
     const reqq ={
         method: "GET",

@@ -3,7 +3,6 @@ import HomeMenu from "./HomeMenu.js"
 import TypesMenu from "./TypesMenu.js"
 
 const Menu = () => { 
-
     return (
         <div className="home-menu">
             <ul className="hm-ul">
@@ -13,5 +12,6 @@ const Menu = () => {
         </div>
     )
 }
+
 export default Menu;
   

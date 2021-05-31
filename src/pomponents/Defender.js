@@ -1,12 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { getPersonalities } from "../actions/getPersonalities"
+import { useSelector } from 'react-redux'
 
 const Defender = () => {
   const pState = useSelector(state => state.personalitiesState)
-  const dispatch = useDispatch()
-  // {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - defender")}
   const defender = pState.personalities[9]
-
       return (
         <div className="App">
           <img className="p-band" src={defender.image_two}></img>

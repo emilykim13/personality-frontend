@@ -1,7 +1,6 @@
 import React from 'react'
 
 const PNavIcon = () => {
-
     return (
         <div>
             <div className="container-menu" >

@@ -1,6 +1,5 @@
 const initialState = {
-    personalities: [],
-    loadPersonalities: false
+    personalities: []
 }
 
 const personalitiesReducer = (state = initialState, action) => {
@@ -9,7 +8,6 @@ const personalitiesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 personalities: action.personalities
-                // loadPersonalities: true
             }
             default: 
             return state

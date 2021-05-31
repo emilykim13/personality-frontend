@@ -29,11 +29,6 @@ import Entertainer from "./pomponents/Entertainer.js"
 
 import Results from "./testComponents/Results.js"
 import Tp1 from "./testComponents/Tp1.js"
-import Tp2 from "./testComponents/Tp2.js"
-import Tp3 from "./testComponents/Tp3.js"
-import Tp4 from "./testComponents/Tp4.js"
-import Tp5 from "./testComponents/Tp5.js"
-import Tp6 from "./testComponents/Tp6.js"
 import StartTest from "./testComponents/StartTest.js"
 import LoadTest from "./testComponents/LoadTest.js"
 
@@ -43,20 +38,18 @@ const Routes = (props) => {
     const loading = useSelector(state => state.usersState)
     return(
         <Router>
-                {/* {!localStorage.token ? <Redirect to="/login"/> : null}
-                {localStorage.token === undefined ? <Redirect to="/login"/> : null} */}
-
                 {localStorage.token ? <Header /> : console.log("header not routed")}
                 {!localStorage.token && (localStorage.token === undefined) && <Redirect to="/login"/>}
+        {/* note: just another way to do the logical AND conditional below commented out */}
+                {/* {!localStorage.token ? <Redirect to="/login"/> : null}
+                {localStorage.token === undefined ? <Redirect to="/login"/> : null} */}
             <Switch>
                 <Route path='/login' exact component = { props => <Login {...props} /> } />
                 <Route path='/signup' exact component = { props => <SignUp {...props} /> } />
-
                 <Route path='/home' exact component = { props => <Home {...props} /> } />
                 <Route path='/MyProfile' exact component = { props => <MyProfile {...props} /> } />
                 <Route path='/personalities' exact component = { props => <Personalities {...props} /> } />
                 <Route path='/editAccount' exact component = { props => <EditUserForm {...props} /> } />
-                
                 <Route path='/architect' exact component = { props => <Architect {...props} /> } />
                 <Route path='/logician' exact component = { props => <Logician {...props} /> } />
                 <Route path='/commander' exact component = { props => <Commander {...props} /> } />
@@ -73,13 +66,7 @@ const Routes = (props) => {
                 <Route path='/adventurer' exact component = { props => <Adventurer {...props} /> } />
                 <Route path='/entreprenuer' exact component = { props => <Entreprenuer {...props} /> } />
                 <Route path='/entertainer' exact component = { props => <Entertainer {...props} /> } />
-
                 <Route path='/tp1' exact component = { props => <Tp1 {...props} /> } />
-                <Route path='/tp2' exact component = { props => <Tp2 {...props} /> } />
-                <Route path='/tp3' exact component = { props => <Tp3 {...props} /> } />
-                <Route path='/tp4' exact component = { props => <Tp4 {...props} /> } />
-                <Route path='/tp5' exact component = { props => <Tp5 {...props} /> } />
-                <Route path='/tp6' exact component = { props => <Tp6 {...props} /> } />
                 <Route path='/results' exact component = { props => <Results {...props} /> } />
                 <Route path='/startTest' exact component = { props => <StartTest {...props} /> } />
                 <Route path='/delete' exact component = { props => <DeleteUser {...props} /> } />

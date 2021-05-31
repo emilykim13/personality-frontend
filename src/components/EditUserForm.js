@@ -3,17 +3,13 @@ import { updateUser } from "../actions/userAction"
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 const EditUserForm = (props) => {
-    const uState = useSelector(state => state.usersState)
     const myAccount = useSelector(state => state.usersState.current_user.user)
     const dispatch = useDispatch()
-    // const updatedState = uState.updated
     const myProfiles = useSelector(state => (state.usersState.current_user.profiles < 1) ? "nope" : state.usersState.current_user.profiles)
     const lastIndex = (myProfiles === "nope") ? console.log("profile is empty - lastIndex MyProfile not given") : myProfiles.length - 1
     const myProfile = (myProfiles === "nope") ? console.log("profile is empty - current_profile not available") : myProfiles[lastIndex]
-    // console.log(myProfile)
     return (
         <div>
-            {/* {console.log(updatedState)} */}
             <form onSubmit={(e) => 
                 {e.preventDefault() 
                 dispatch(updateUser(e, myAccount, props.history))}
@@ -39,8 +35,6 @@ const EditUserForm = (props) => {
             </form>
             <Link to="/delete" className="menu-btn">Delete Account</Link><br/><br/>
             <Link to="/home" className="menu-btn">Go Back Home</Link><br/><br/>
-
-
         </div>
     )
 }

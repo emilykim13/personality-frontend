@@ -15,7 +15,6 @@ const LoadTest = (props) => {
                 }}>
                 <h1>Are you ready to find WhoRU?</h1>
                 <Link to="/home" className="menu-btn">NOPE</Link>
-
                 <br/><br/><br/><br/>
                 <input className="menu-btn" type="submit" value="YUP"/>
             </form>
