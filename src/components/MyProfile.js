@@ -1,10 +1,9 @@
 import React from "react"
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 const MyProfile = (props) => {
   const testing = useSelector(state => state.usersState.current_user)
   const myAccount = useSelector(state => state.usersState.current_user.user)
-  // console.log(testing.profiles.length)
   const myProfiles = (testing.profiles.length === 0) ? "berto" : testing.profiles 
   const myRawTests = (testing.tests.length === 0) ? "emers" : testing.tests
   const lastProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -lastProfile") : myProfiles.length - 1 
@@ -13,7 +12,7 @@ const MyProfile = (props) => {
   const lastIndex = (myRawTests === "emers") ? console.log("note: no tests taken yet -lastIndex") : myTests.length - 1 
   const prsnts = useSelector(state => state.personalitiesState.personalities)
   const filteredPersonality = (myRawTests === "emers") ? console.log("note: no tests taken yet -filterPersonality") : prsnts.filter(p => p.letters === myTests[lastIndex].results)[0]
-  console.log(filteredPersonality)
+  console.log(testing)
   const linkyloo = (myRawTests === "emers") ? console.log("cannot get filteredPersonality - no test created yet") : `/${filteredPersonality.name.toLowerCase()}`
 
   if((myProfiles === "berto"))

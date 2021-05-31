@@ -8,7 +8,7 @@ const Results = (props) => {
     // const lastTest = userTests.length - 1
     const lastTest = (userTests === 0) ? console.log("note: no tests taken yet -lastTest") : userTests.length - 1 
     const currentTest = userTests[lastTest]
-    console.log(currentTest)
+    // console.log(currentTest)
     const resultsPersonalities = useSelector(state => state.personalitiesState.personalities)
     const resultPerson = resultsPersonalities.filter(p => p.letters === currentTest.results)[0]
     const linkydoo = `${resultPerson.name.toLowerCase()}`

@@ -5,8 +5,6 @@ import PNavIcon from "./PNavIcon"
 const TypesMenu = () => {
     let [displayPState, setDisplay] = useState(false)
     return (
-
-    
     <div>
         <button onClick={() => setDisplay(!displayPState)}> {<PNavIcon/>} </button>
         {

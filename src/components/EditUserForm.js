@@ -1,7 +1,7 @@
 import React from 'react'
 import { updateUser } from "../actions/userAction"
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 const EditUserForm = (props) => {
     const uState = useSelector(state => state.usersState)
     const myAccount = useSelector(state => state.usersState.current_user.user)

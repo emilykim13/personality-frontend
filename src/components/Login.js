@@ -1,12 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { handleLogin } from "../actions/loginAction"
 
 
 
 const Login = (props) => {
-    // const loading = useSelector(state => state.loginState)
     let dispatch = useDispatch()
     return (
         <div className="sign-in">

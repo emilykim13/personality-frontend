@@ -1,15 +1,10 @@
 import React from 'react'
-// import { loadLogin } from "../actions/loginAction"
 import { useSelector } from 'react-redux'
 
 
 const Home = () => {
-  const loading = useSelector(state => state.loginState)
-  // const dispatch = useDispatch()
-  // useEffect(() => {
-  //   // console.log(localStorage.getItem("token"));
-  //   loadLogin(dispatch);
-  // },[]);
+  // const loading = useSelector(state => state.loginState)
+
     return (
         <div>
           <header className="App">

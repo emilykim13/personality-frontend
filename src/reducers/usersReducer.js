@@ -29,7 +29,6 @@ const usersReducer = (state = initialState, action) => {
             current_user: {}
             }
         case "SET_USERS":
-            // console.log(action)
             return {
                 ...state,
                 users: action.users,
@@ -39,18 +38,14 @@ const usersReducer = (state = initialState, action) => {
             // console.log(action)
             return {
                 ...state,
-                current_user: action.current_user
-                // loadUsers: true
+                current_user: state.current_user
+                // fetch is made to /loadlogin in rails but does not get used
             }
         case "UPDATE_USER":
             console.log(action)
             return{
                 ...state, 
                 current_user: action.current_user
-                // profiles: action.current_user.profiles,
-                // tests: action.current_user.tests,
-                // loadUsers: true
-                // updated: !state.updated
             }
             default: 
             return state

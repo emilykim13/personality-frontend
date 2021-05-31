@@ -34,7 +34,7 @@ export const loadLogin = (dispatch) => {
     fetch("http://localhost:3000/api/v1/loadlogin", reqPackage)
     .then(res => res.json())
     .then(data => {
-        dispatch({type: "SET_USER", current_user: data})
+        dispatch({type: "SET_USER"})
     })
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     const personalitiesUrl = "http://localhost:3000/api/v1/personalities"

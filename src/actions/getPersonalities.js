@@ -5,7 +5,6 @@ export const handleSetPersonalities = (personalities) => {
 }
 
 export const getPersonalities = dispatch => {
-    console.log(dispatch)
     fetch(personalitiesUrl, {
         method: "GET",
         headers: {

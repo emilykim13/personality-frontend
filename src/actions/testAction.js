@@ -56,29 +56,10 @@ export const handleResponses = (e, quest_id, dispatch, history) => {
     fetch("http://localhost:3000/api/v1/resdata", req)
     .then(res => res.json())
     .then(dataR => {
-        dispatch({type: "SET_RESULTS", test: dataR, p_results: dataR.p_results})
+        // debugger
+        dispatch({type: "UPDATE_USER", current_user: dataR})
         history.push('/results')
     })
 
 
 }
-
-// const testsUrl = "http://localhost:3000/api/v1/tests"
-
-// export const handleSetPersonalities = (personalities) => {
-//     return { type: 'SET_PERSONALITIES', personalities }
-// }
-
-// export const getPersonalities = dispatch => {
-//     console.log(dispatch)
-//     fetch(testsUrl, {
-//         method: "GET",
-//         headers: {
-//             "Content-Type" : "application/json",
-//             "Accept" : "application/json",
-//             "Authorization": `Bearer ${localStorage.getItem("token")}`
-//         }
-//     })
-//     .then(res => res.json())
-//     .then(pData => {dispatch(handleSetPersonalities(pData))})
-// }

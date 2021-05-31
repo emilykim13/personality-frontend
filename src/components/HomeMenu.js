@@ -1,13 +1,10 @@
 import React, {useState} from "react"
-import { Link, Redirect, useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { handleLogout } from "../actions/loginAction"
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import NavIcon from "./NavIcon.js"
-import PNavIcon from "./PNavIcon.js"
-import TypesMenu from "./TypesMenu"
 
 const HomeMenu = () => {
-    let logState = useSelector(state => state.usersState)
     let dispatch = useDispatch()
     let history = useHistory()
     const [displayState, setDisplay] = useState(false)
@@ -21,10 +18,6 @@ const HomeMenu = () => {
                 <li className="hm-li"><Link to="/MyProfile" onClick={() => setDisplay(!displayState)}className="menu-btn">Profile</Link></li>
                 <li className="hm-li"><Link to="/personalities" className="menu-btn" onClick={() => setDisplay(!displayState)}>Personalities</Link></li>
                 <li className="hm-li"><Link to="/loadTest" className="menu-btn" onClick={() => setDisplay(!displayState)}>Take a test</Link></li>
-
-                {/* <li className="hm-li"><TypesMenu/></li> */}
-
-
                 <li className="hm-li"><button className="menu-btn" onClick={() => handleLogout(history, dispatch)}>Logout</button></li>
                 <br/><br/>
             </div> 
