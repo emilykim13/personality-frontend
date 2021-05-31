@@ -18,6 +18,10 @@ const usersReducer = (state = initialState, action) => {
             loggedIn: true,
             current_user: action.current_user
             }
+        case 'SIGN_UP':
+            return {
+            ...state
+            }
         case 'LOGOUT_USER':
             return {
             ...state,

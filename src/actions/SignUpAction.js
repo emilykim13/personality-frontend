@@ -17,10 +17,11 @@ export const handleSignUp = (logUser, history, dispatch) => {
     fetch("http://localhost:3000/api/v1/signup", reqPackage)
     .then(res => res.json())
     .then(data => {
-        {data.token === undefined ? localStorage.clear() : localStorage.setItem("token", data.token)}
-        {data.token === undefined ? history.push('/signup') : history.push('/home')}
-        {data.token === undefined ? alert("INVALID! TRY AGAIN.") : history.push('/home')}
-        dispatch({type: "LOGIN_USER", user: data})
+        {data.token === undefined ? history.push('/signup') : history.push('/login')}
+        {data.token === undefined ? localStorage.clear() : history.push('/login')}
+        {data.token === undefined ? alert("INVALID! TRY AGAIN.") : history.push('/login')}
+        dispatch({type: "SIGN_UP"})
+        localStorage.clear()
     })
 }
 
