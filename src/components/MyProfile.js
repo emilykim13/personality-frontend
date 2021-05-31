@@ -1,6 +1,7 @@
 import React from "react"
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+
 const MyProfile = (props) => {
   const testing = useSelector(state => state.usersState.current_user)
   const myAccount = useSelector(state => state.usersState.current_user.user)
