@@ -1,12 +1,18 @@
 import React from 'react'
-import { Redirect, Link } from "react-router-dom"
+// import { loadLogin } from "../actions/loginAction"
+import { useSelector } from 'react-redux'
 
-const Home = (props) => {
-  console.log("home")
+
+const Home = () => {
+  const loading = useSelector(state => state.loginState)
+  // const dispatch = useDispatch()
+  // useEffect(() => {
+  //   // console.log(localStorage.getItem("token"));
+  //   loadLogin(dispatch);
+  // },[]);
     return (
         <div>
           <header className="App">
-            {/* <img className="img-band" src="https://live-production.wcms.abc-cdn.net.au/ec9de9743a21adc30a3716cb91347c85?impolicy=wcms_crop_resize&cropH=1069&cropW=1898&xPos=16&yPos=0&width=862&height=485"></img><br/><br/> */}
             <h1>Welcome to WhoRU!</h1>
             <h5>A personality web-app created by Emily Nguyen</h5>
           </header>

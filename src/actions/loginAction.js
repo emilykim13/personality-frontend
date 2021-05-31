@@ -34,8 +34,7 @@ export const loadLogin = (dispatch) => {
     fetch("http://localhost:3000/api/v1/loadlogin", reqPackage)
     .then(res => res.json())
     .then(data => {
-        dispatch({type: "GET_USERS", current_user: data})
-        // dispatch({type: "LOGIN_USER", current_user: data})
+        dispatch({type: "SET_USER", current_user: data})
     })
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     const personalitiesUrl = "http://localhost:3000/api/v1/personalities"
@@ -44,7 +43,7 @@ export const loadLogin = (dispatch) => {
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
     }
     fetch(personalitiesUrl, reqq)
@@ -56,7 +55,6 @@ export const loadLogin = (dispatch) => {
 }
 
 export const handleLogout = (history, dispatch) => {
-    // localStorage.setItem("token", "")
     localStorage.clear()
     dispatch({type: "LOGOUT_USER"})
     history.push('/login')

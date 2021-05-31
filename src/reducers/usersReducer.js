@@ -4,11 +4,7 @@ const initialState = {
     password: null,
     loggedIn: false,
     loadUsers: false,
-    // profiles: [],
     current_user: {},
-    updated: false,
-    deleted: false,
-    // tests: []
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -30,11 +26,7 @@ const usersReducer = (state = initialState, action) => {
             password: null,
             loggedIn: false,
             loadUsers: false,
-            // profiles: [],
-            current_user: {},
-            updated: false,
-            deleted: false,
-            // tests: []
+            current_user: {}
             }
         case "SET_USERS":
             // console.log(action)
@@ -43,22 +35,22 @@ const usersReducer = (state = initialState, action) => {
                 users: action.users,
                 loadUsers: true
             }
-        case "GET_USERS":
+        case "SET_USER":
             // console.log(action)
             return {
                 ...state,
-                current_user: action.current_user,
-                loadUsers: true
+                current_user: action.current_user
+                // loadUsers: true
             }
         case "UPDATE_USER":
             console.log(action)
             return{
                 ...state, 
-                current_user: action.current_user,
+                current_user: action.current_user
                 // profiles: action.current_user.profiles,
                 // tests: action.current_user.tests,
-                loadUsers: true,
-                updated: !state.updated
+                // loadUsers: true
+                // updated: !state.updated
             }
             default: 
             return state

@@ -3,19 +3,16 @@ import React, {useEffect} from "react"
 import Routes from './Routes.js';
 import {useDispatch, useSelector} from "react-redux"
 import { loadLogin } from "./actions/loginAction"
-import { getPersonalities } from './actions/getPersonalities';
 
 const App = (props) => {
-  let loadState = useSelector(state => state.usersState)
-  let dispatch = useDispatch()
+  const loggedIn = useSelector(state => state.usersState.loggedIn)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    if(localStorage.token){
-      loadLogin(dispatch);
-      // getPersonalities(dispatch)
-    }
-  }, [])
-  
+    if(loggedIn === true){
+    loadLogin(dispatch)}
+  },[loggedIn]);
+
     return (
       <div>
         <Routes/>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom"
 import Home from "./components/Home.js"
 import Login from "./components/Login.js"
@@ -8,7 +8,7 @@ import Personalities from "./components/Personalities.js"
 import EditUserForm from "./components/EditUserForm.js"
 import DeleteUser from "./components/DeleteUser.js"
 import Header from './Header.js'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import Architect from "./pomponents/Architect.js"
 import Logician from "./pomponents/Logician.js"
@@ -40,16 +40,18 @@ import LoadTest from "./testComponents/LoadTest.js"
 
 
 const Routes = (props) => {
-    let logState = useSelector(state => state.loginState)
+    const loading = useSelector(state => state.usersState)
     return(
         <Router>
                 {/* {!localStorage.token ? <Redirect to="/login"/> : null}
                 {localStorage.token === undefined ? <Redirect to="/login"/> : null} */}
-                {!localStorage.token && (localStorage.token === undefined) && <Redirect to="/login"/>}
+
                 {localStorage.token ? <Header /> : console.log("header not routed")}
+                {!localStorage.token && (localStorage.token === undefined) && <Redirect to="/login"/>}
             <Switch>
                 <Route path='/login' exact component = { props => <Login {...props} /> } />
                 <Route path='/signup' exact component = { props => <SignUp {...props} /> } />
+
                 <Route path='/home' exact component = { props => <Home {...props} /> } />
                 <Route path='/MyProfile' exact component = { props => <MyProfile {...props} /> } />
                 <Route path='/personalities' exact component = { props => <Personalities {...props} /> } />

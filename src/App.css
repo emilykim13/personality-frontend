@@ -287,6 +287,23 @@
 }
 
 
+.avatar-div {
+	height: 300px;
+	width: 300px;
+	/* justify-content: center; */
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.img-avatar {
+	/* display: inline; */
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
 *{
 font-family: 'Quicksand', sans-serif;
 }
