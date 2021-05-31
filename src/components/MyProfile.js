@@ -59,7 +59,6 @@ const MyProfile = (props) => {
         <p>{filteredPersonality.intropp}</p>
         <h1> You can read more about <Link to={linkyloo}>{filteredPersonality.name}s</Link> and other personality types <Link to="/personalities">here</Link>.</h1>
         <Link to="/loadTest" className="menu-btn">Retake Test</Link>
-
       </div>
     )
   }

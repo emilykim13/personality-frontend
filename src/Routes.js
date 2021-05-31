@@ -9,7 +9,6 @@ import EditUserForm from "./components/EditUserForm.js"
 import DeleteUser from "./components/DeleteUser.js"
 import Header from './Header.js'
 import { useSelector, useDispatch } from 'react-redux'
-
 import Architect from "./pomponents/Architect.js"
 import Logician from "./pomponents/Logician.js"
 import Commander from "./pomponents/Commander.js"
@@ -26,15 +25,12 @@ import Virtuoso from "./pomponents/Virtuoso.js"
 import Adventurer from "./pomponents/Adventurer.js"
 import Entreprenuer from "./pomponents/Entreprenuer.js"
 import Entertainer from "./pomponents/Entertainer.js"
-
 import Results from "./testComponents/Results.js"
 import Tp1 from "./testComponents/Tp1.js"
 import StartTest from "./testComponents/StartTest.js"
 import LoadTest from "./testComponents/LoadTest.js"
 
-
-
-const Routes = (props) => {
+const Routes = () => {
     const loading = useSelector(state => state.usersState)
     return(
         <Router>
