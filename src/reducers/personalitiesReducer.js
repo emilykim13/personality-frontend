@@ -8,8 +8,8 @@ const personalitiesReducer = (state = initialState, action) => {
         case "SET_PERSONALITIES":
             return {
                 ...state,
-                personalities: action.personalities,
-                loadPersonalities: true
+                personalities: action.personalities
+                // loadPersonalities: true
             }
             default: 
             return state

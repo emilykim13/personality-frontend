@@ -4,10 +4,7 @@ const initialState = {
     password: null,
     loggedIn: false,
     loadUsers: false,
-    profiles: [],
     current_user: {},
-    updated: false,
-    deleted: false
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -29,32 +26,26 @@ const usersReducer = (state = initialState, action) => {
             password: null,
             loggedIn: false,
             loadUsers: false,
-            profiles: [],
-            current_user: {},
-            updated: false,
-            deleted: false
+            current_user: {}
             }
         case "SET_USERS":
-            // console.log(action)
             return {
                 ...state,
                 users: action.users,
                 loadUsers: true
             }
-        case "GET_USERS":
+        case "SET_USER":
             // console.log(action)
             return {
                 ...state,
-                current_user: action.current_user,
-                loadUsers: true
+                current_user: state.current_user
+                // fetch is made to /loadlogin in rails but does not get used
             }
         case "UPDATE_USER":
+            console.log(action)
             return{
                 ...state, 
-                current_user: action.current_user,
-                profiles: state.current_user.profiles,
-                loadUsers: true,
-                updated: !state.updated
+                current_user: action.current_user
             }
             default: 
             return state

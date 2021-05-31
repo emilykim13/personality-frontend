@@ -4,7 +4,7 @@ import { getPersonalities } from "../actions/getPersonalities"
 const Entertainer = () => {
   const pState = useSelector(state => state.personalitiesState)
   const dispatch = useDispatch()
-  {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - entertainer")}
+  // {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - entertainer")}
   const entertainer = pState.personalities[15]
 
       return (

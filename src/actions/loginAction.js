@@ -1,6 +1,6 @@
 export const handleLogin = (logUser, history, dispatch) => {
     let user = {
-        name: logUser[0].value,
+        email: logUser[0].value,
         password: logUser[1].value
     }
     const reqPackage={
@@ -8,18 +8,18 @@ export const handleLogin = (logUser, history, dispatch) => {
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify(user)
     }
     fetch("http://localhost:3000/api/v1/login", reqPackage)
     .then(res => res.json())
     .then(data => {
-        localStorage.setItem("token", data.token)
-        // localStorage.profiles = data.profiles
-        dispatch({type: "LOGIN_USER", current_user: data, email: logUser[0].value})
-        {data.token ? history.push('/home') : history.push('/login')}
-    })
+        {data.token === undefined ? localStorage.clear() : localStorage.setItem("token", data.token)}
+        {data.token === undefined ? history.push('/login') : history.push('/home')}
+        dispatch({type: "LOGIN_USER", current_user: data})
+        })
+
 }
 
 export const loadLogin = (dispatch) => {
@@ -28,23 +28,22 @@ export const loadLogin = (dispatch) => {
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
     }
     fetch("http://localhost:3000/api/v1/loadlogin", reqPackage)
     .then(res => res.json())
     .then(data => {
-        dispatch({type: "GET_USERS", current_user: data})
-        // {loadUsers ? history.push('/login') : history.push('/login')}
+        dispatch({type: "SET_USER"})
     })
-    
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     const personalitiesUrl = "http://localhost:3000/api/v1/personalities"
     const reqq ={
         method: "GET",
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
     }
     fetch(personalitiesUrl, reqq)
@@ -52,10 +51,10 @@ export const loadLogin = (dispatch) => {
     .then(pData => {
         dispatch({type: "SET_PERSONALITIES", personalities: pData})
     })
+
 }
 
 export const handleLogout = (history, dispatch) => {
-    // localStorage.setItem("token", "")
     localStorage.clear()
     dispatch({type: "LOGOUT_USER"})
     history.push('/login')

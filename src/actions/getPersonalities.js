@@ -5,13 +5,12 @@ export const handleSetPersonalities = (personalities) => {
 }
 
 export const getPersonalities = dispatch => {
-    console.log(dispatch)
     fetch(personalitiesUrl, {
         method: "GET",
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
     })
     .then(res => res.json())

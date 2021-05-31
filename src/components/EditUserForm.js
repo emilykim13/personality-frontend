@@ -1,34 +1,45 @@
 import React from 'react'
 import { updateUser } from "../actions/userAction"
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, Redirect } from 'react-router-dom'
-import { deleteUser } from '../actions/userAction'
-import DeleteUser from './DeleteUser.js'
+import { Link } from 'react-router-dom'
 const EditUserForm = (props) => {
     const uState = useSelector(state => state.usersState)
     const myAccount = useSelector(state => state.usersState.current_user.user)
     const dispatch = useDispatch()
-    const updatedState = uState.updated
+    // const updatedState = uState.updated
+    const myProfiles = useSelector(state => (state.usersState.current_user.profiles < 1) ? "nope" : state.usersState.current_user.profiles)
+    const lastIndex = (myProfiles === "nope") ? console.log("profile is empty - lastIndex MyProfile not given") : myProfiles.length - 1
+    const myProfile = (myProfiles === "nope") ? console.log("profile is empty - current_profile not available") : myProfiles[lastIndex]
+    // console.log(myProfile)
     return (
         <div>
-            {console.log(updatedState)}
+            {/* {console.log(updatedState)} */}
             <form onSubmit={(e) => 
                 {e.preventDefault() 
                 dispatch(updateUser(e, myAccount, props.history))}
                 }> 
                 <h1>Update account information: </h1>
-                <label>name:</label>
-                <input required defaultValue={myAccount.name} type="text"/>
+                <label>Username:</label>
+                <input required defaultValue={(myProfiles === "nope") ? myAccount.name : myProfile.username} type="text"/>
                 <br/>
-                <label>email</label>
-                <input required defaultValue={myAccount.email}type="text"/>
+                <label>Email:</label>
+                <input required defaultValue={(myProfiles === "nope") ? myAccount.email : myProfile.email}type="text"/>
                 <br/>
-                {/* <label>password</label>
-                <input required type="password"/> */}
+                <label>First Name:</label>
+                <input required defaultValue={(myProfiles === "nope") ? "" : myProfile.first_name}type="text"/>
+                <br/>
+                <label>Last Name: </label>
+                <input required defaultValue={(myProfiles === "nope") ? "" : myProfile.last_name}type="text"/>
+                <br/>
+                <label>Profile Photo: </label>
+                <input required defaultValue={(myProfiles === "nope") ? "" : myProfile.photo}type="text"/>
+                <br/>
                 <br/>
                 <input className="menu-btn" type="submit" value="Update"/>
             </form>
             <Link to="/delete" className="menu-btn">Delete Account</Link><br/><br/>
+            <Link to="/home" className="menu-btn">Go Back Home</Link><br/><br/>
+
 
         </div>
     )

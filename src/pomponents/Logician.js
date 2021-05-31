@@ -4,7 +4,7 @@ import { getPersonalities } from "../actions/getPersonalities"
 const Logician = () => {
   const pState = useSelector(state => state.personalitiesState)
   const dispatch = useDispatch()
-  {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - logician")}
+  // {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - logician")}
   const logician = pState.personalities[1]
 
       return (

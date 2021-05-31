@@ -22,9 +22,9 @@ export const handletest = (user, dispatch, history) => {
 
 
 export const handleResponses = (e, quest_id, dispatch, history) => {
-    var rowsA = []
-    var rowsB = []
-    for ( var i = 0; i < 420; i++) {
+    let rowsA = []
+    let rowsB = []
+    for ( let i = 0; i < 420; i++) {
         {
             rowsA.push(e.target[i].value); 
             rowsB.push(e.target[i].checked)
@@ -37,7 +37,7 @@ export const handleResponses = (e, quest_id, dispatch, history) => {
     // console.log(indices)
 
     // 60 responses 
-    var indicesA = indices.map(index => rowsA[index])
+    let indicesA = indices.map(index => rowsA[index])
     console.log(indicesA)
     let responses = {
         question_id: quest_id,
@@ -49,14 +49,15 @@ export const handleResponses = (e, quest_id, dispatch, history) => {
         headers: {
             "Content-Type" : "application/json",
             "Accept" : "application/json",
-            "Authorization": `Bearer ${localStorage.token}`
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify({resdata: responses})
     }
     fetch("http://localhost:3000/api/v1/resdata", req)
     .then(res => res.json())
     .then(dataR => {
-        dispatch({type: "SET_RESULTS", test: dataR, p_results: dataR.p_results})
+        // debugger
+        dispatch({type: "UPDATE_USER", current_user: dataR})
         history.push('/results')
     })
 

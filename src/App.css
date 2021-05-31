@@ -67,6 +67,7 @@
 	justify-self: center;
 	height: 16rem;
 	width: auto;
+	cursor:pointer;
   }
 
 .p-band {
@@ -130,6 +131,12 @@
 	box-shadow: 4 8px 4px 0 rgba(255, 223, 233, 0.836);
 }
 
+.home-btn {
+	margin: 2px 0;
+	width: auto;
+	right: 0px;
+	
+}
 
 
 .right {
@@ -267,7 +274,6 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#000000;
-	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 20px;
@@ -278,4 +284,26 @@
 	text-align: center;
 	width: 50%;
 	margin: 0 auto;
+}
+
+
+.avatar-div {
+	height: 300px;
+	width: 300px;
+	/* justify-content: center; */
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.img-avatar {
+	/* display: inline; */
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+*{
+font-family: 'Quicksand', sans-serif;
 }

@@ -5,7 +5,7 @@ import { getPersonalities } from "../actions/getPersonalities"
 const Architect = () => {
   const pState = useSelector(state => state.personalitiesState)
   const dispatch = useDispatch()
-  {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - architect")}
+  // {!pState.loadPersonalities ? dispatch(getPersonalities) : console.log("nope - architect")}
   const architect = pState.personalities[0]
 //   {console.log(architect)}
 
