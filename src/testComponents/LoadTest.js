@@ -8,13 +8,13 @@ const LoadTest = (props) => {
     const dispatch = useDispatch()
     console.log(user)
     return (
-        <div>
+        <div className="App">
             <form onSubmit={async (e) => {
                 e.preventDefault()
                 handletest(user, dispatch, props.history)
                 }}>
                 <h1>Are you ready to find WhoRU?</h1>
-                <Link to="/home" className="menu-btn">NOPE</Link>
+                <Link to="/home" className="delete-btn">NOPE</Link>
                 <br/><br/><br/><br/>
                 <input className="menu-btn" type="submit" value="YUP"/>
             </form>

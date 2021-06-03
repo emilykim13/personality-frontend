@@ -6,11 +6,13 @@ const MyProfile = (props) => {
   const testing = useSelector(state => state.usersState.current_user)
   const myAccount = useSelector(state => state.usersState.current_user.user)
   const stateProfiles = useSelector(state => state.profilesState.profiles)
+
   const myProfiles = (testing.profiles.length === 0) ? "berto" : testing.profiles 
   const myRawTests = (testing.tests.length === 0) ? "emers" : testing.tests
-  const lastProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -lastProfile") : stateProfiles.length - 1 
-  const currentProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -currentProfile") :  stateProfiles[lastProfile]
-  // console.log(currentProfile)
+  const checkProfiles = (stateProfiles.length === 0) ? testing.profiles : stateProfiles
+  const lastProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -lastProfile") : checkProfiles.length - 1 
+  const currentProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -currentProfile") :  checkProfiles[lastProfile]
+  // console.log(checkProfiles)
   const myTests = (myRawTests === "emers") ? console.log("note: no tests taken yet -myTests") : myRawTests.filter(test => test.results !== null) 
   const lastIndex = (myRawTests === "emers") ? console.log("note: no tests taken yet -lastIndex") : myTests.length - 1 
   const prsnts = useSelector(state => state.personalitiesState.personalities)
@@ -58,11 +60,12 @@ const MyProfile = (props) => {
         <p>Full Name: {currentProfile.first_name} {currentProfile.last_name}</p>
         <Link to="/editAccount" className="menu-btn">Edit Account</Link>
         <h1> Your latest personality type: {myTests[lastIndex].results}</h1>
-        <img onClick={() => props.history.push(linkyloo)} className="p-avatar" src={filteredPersonality.image}></img>
-        <p>{filteredPersonality.introduction}</p>
-        <p>{filteredPersonality.intropp}</p>
+        <img onClick={() => props.history.push(linkyloo)} className="p-avatar" src={filteredPersonality.image}></img><br/><br/>
+        <p className="para-contain">{filteredPersonality.introduction}</p><br/>
+        <p className="para-contain" >{filteredPersonality.intropp}</p>
         <h1> You can read more about <Link to={linkyloo}>{filteredPersonality.name}s</Link> and other personality types <Link to="/personalities">here</Link>.</h1>
         <Link to="/loadTest" className="menu-btn">Retake Test</Link>
+        <br/><br/><br/><br/><br/>
       </div>
     )
   }

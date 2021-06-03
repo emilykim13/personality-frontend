@@ -13,7 +13,7 @@ const Results = (props) => {
     console.log(resultPerson)
     return (
         <div className="App">
-            <h1>THE RESULTSSSS!</h1>
+            <h1>YOUR RESULTS!</h1>
             <h1>{currentTest.results} aka the {resultPerson.name}</h1>
             <p>{resultPerson.introduction}</p>
             <p>{resultPerson.intropp}</p>
