@@ -221,8 +221,13 @@
   .head-img-band {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	justify-self: center;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
 	height: 30rem;
-	width: auto;
+	width: 80rem;
+	background-color: #ffcdf8;
   }
 
   .delete-btn {
@@ -260,8 +265,8 @@
 	align-items: center;
 	/* justify-content: center; */
 	text-align: center;
-	width: 90rem;
-	height: 90rem;
+	width: auto;
+	height: 75rem;
 	background-image: url(https://i.pinimg.com/originals/5e/80/2f/5e802f87d0e06290bf8ca860ab1d7dca.gif)
 }
 
@@ -282,7 +287,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	width: 50%;
+	width: 25%;
 	margin: 0 auto;
 }
 
@@ -304,6 +309,17 @@
 	height: 100%;
 	border-radius: 50%;
 }
+
+.white-box {
+    position: absolute;
+    background-color: #ffd7d7;
+    color: black;
+    width: auto;
+    height: auto;
+    padding: 20px;
+	text-align: center;
+}
+
 *{
 font-family: 'Quicksand', sans-serif;
 }

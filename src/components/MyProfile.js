@@ -5,15 +5,17 @@ import { Link } from 'react-router-dom'
 const MyProfile = (props) => {
   const testing = useSelector(state => state.usersState.current_user)
   const myAccount = useSelector(state => state.usersState.current_user.user)
+  const stateProfiles = useSelector(state => state.profilesState.profiles)
   const myProfiles = (testing.profiles.length === 0) ? "berto" : testing.profiles 
   const myRawTests = (testing.tests.length === 0) ? "emers" : testing.tests
-  const lastProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -lastProfile") : myProfiles.length - 1 
-  const currentProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -currentProfile") :  myProfiles[lastProfile]
+  const lastProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -lastProfile") : stateProfiles.length - 1 
+  const currentProfile = (myProfiles === "berto") ? console.log("note: no profile written yet -currentProfile") :  stateProfiles[lastProfile]
+  // console.log(currentProfile)
   const myTests = (myRawTests === "emers") ? console.log("note: no tests taken yet -myTests") : myRawTests.filter(test => test.results !== null) 
   const lastIndex = (myRawTests === "emers") ? console.log("note: no tests taken yet -lastIndex") : myTests.length - 1 
   const prsnts = useSelector(state => state.personalitiesState.personalities)
   const filteredPersonality = (myRawTests === "emers") ? console.log("note: no tests taken yet -filterPersonality") : prsnts.filter(p => p.letters === myTests[lastIndex].results)[0]
-  console.log(testing)
+  // console.log(testing)
   const linkyloo = (myRawTests === "emers") ? console.log("cannot get filteredPersonality - no test created yet") : `/${filteredPersonality.name.toLowerCase()}`
 
   if((myProfiles === "berto"))
@@ -32,6 +34,7 @@ const MyProfile = (props) => {
       <div className="App">
         <h1>Ni haody, {myAccount.name}!</h1>
         <div className="avatar-div">
+          {console.log(currentProfile)}
         <img className="img-avatar" src={currentProfile.photo}></img><br/><br/>
         </div>
         <p>Username: {myAccount.name}</p>
